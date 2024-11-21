@@ -5,15 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil e Relatórios</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+.rubik-<uniquifier> {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal
+}
+
+h1{
+    font-size: 50px;
+}
+
         body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family:"Rubik",sans-serif;
     background: #1c1c1c;
     color: #000000;
     background-image: url('../IMAGENS/background2.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
+}
+
+H3{
+    font-size: 30px;
 }
 
         .container {
@@ -54,7 +72,10 @@
         .form-group input {
             width: 80%;
             padding: 8px;
-            margin-top: 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin: 2px;
+            margin-right: 15px;
             border: 1px solid #ddd;
             border-radius: 5px;
         }
@@ -79,12 +100,13 @@
         }
 
         .report-card button {
-            background: #535353;
+            font-size: 20px;
+            background: #a6a6a6;
             color: #fff;
             border: none;
-            padding: 8px 12px;
-            border-radius: 5px;
-            cursor: pointer;
+            padding: 8px 35px;
+            border-radius: 8px;
+            
         }
 
         
@@ -129,28 +151,31 @@
         .back-button a {
             text-decoration: none;
             padding: 10px 20px;
-            background: #333;
-            color: #fff;
+            background: #CBCBCB;
+            color: #000000;
             border-radius: 5px;
         }
 
         .back-button a:hover {
-            background: #555;
+            background: #c5c5c5;
         }
 
         p{
             border-radius: 50%;
         }
+        .shark-logo{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Perfil e Relatórios</h1>
+        <h1>PERFIL E RELATÓRIOS</h1>
         <div class="section">
             <div>
                 <div class="form-group">
                     <label for="cpf">CPF</label>
-                    <input type="text" id="cpf" placeholder="000.000.000-00"><img src="../IMAGENS/editar35.png">
+                    <input type="text" id="cpf" placeholder="959.834.432-91"><img src="../IMAGENS/editar35.png">
                     
                 </div>
                 <div class="form-group">
@@ -160,7 +185,7 @@
                 </div>
                 <div class="form-group">
                     <label for="telefone">Telefone</label>
-                    <input type="text" id="telefone" placeholder="(00) 00000-0000">
+                    <input type="text" id="telefone" placeholder="(11) 941369774">
                     <img src="../IMAGENS/editar35.png">
                 </div>
             
@@ -177,30 +202,38 @@
             </div>
             <p> <img src="../IMAGENS/ituanoituanoperfil350.png"></p> 
         </div>
+        <h3>RELATÓRIOS</h3>
 
         <div class="reports">
             <div class="report-card">
-                <span>MAR: 4400L</span>
+                <span>MARÇO - 4400L</span>
                 <button>+34 SP</button>
             </div>
             <div class="report-card">
-                <span>FEV: 4370L</span>
+                <span>FEVEREIRO - 4370L</span>
                 <button>+44 SP</button>
             </div>
             <div class="report-card">
-                <span>JAN: 4498L</span>
-                <button>+23 SP</button>
+                <span>JANEIRO - 4498L</span>
+                <button>+23 SP</BUTTON>
             </div>
         </div>
 
-        <div class="saldo">Saldo Atual: 196 SP</div>
-
+        <div class="saldo">SALDO ATUAL - 196 SP</div>
+        <div CLASS="shark-logo">
+            <img src="../IMAGENS/gifsharkpointSP.gif" CLASS="SHARKLOGO">
+        </div>
+        
         <div class="compras">
-            <h3>Últimas Compras</h3>
+            <h3>ÚLTIMAS COMPRAS</h3>
             <ul>
                 <li>Netflix - 47SP - COD: 1234-4317-4323-4313</li>
                 <li>Netflix - 47SP - COD: 2549-2544-4233-9875</li>
+                <li>Netflix - 47SP - COD: 2549-2544-4233-9875</li>
             </ul>
+            <div class="back-button">
+                <a href="#">VER MAIS</a>
+            </div>
         </div>
 
         <div class="shark-logo">
