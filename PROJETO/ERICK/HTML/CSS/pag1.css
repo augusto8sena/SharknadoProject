@@ -1,0 +1,63 @@
+.texto-branco{
+    color:white;
+}
+
+body {
+    background-color: #252424;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0;
+}
+
+.caixa {
+    width: 35%;         
+    height: 200px;          
+    background-color:#333; 
+    padding: 20px;                     
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    border-radius: 20px; 
+}
+
+.button {
+    background-color: #040404; 
+    color: rgb(251, 247, 247); 
+    padding: 10px 20px; 
+    border: 5px; 
+    cursor: pointer; 
+    font-size: 16px;
+    border-radius: 20px; 
+    text-decoration: none;
+    
+}
+
+.button2 {
+    background-color: #040404; 
+    color: rgb(251, 247, 247); 
+    padding: 10px 20px; 
+    border: 5px; 
+    cursor: pointer; 
+    font-size: 16px;
+    margin-left: 160px;
+    border-radius: 20px; 
+    text-decoration: none;
+}
+.voltar {
+    color: rgb(251, 247, 247); 
+    cursor: pointer; 
+    font-size: 16px;
+    margin-left: 470px;
+    text-decoration: none;
+}
+.logo {
+    width: 0px; 
+    height: 0px;
+    margin-right: 430px;
+    margin-top: 85px;
+    z-index: 1;
+}
+
