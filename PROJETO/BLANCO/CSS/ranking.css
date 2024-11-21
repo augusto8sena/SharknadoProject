@@ -1,0 +1,120 @@
+/* Estilo geral da página */
+body {
+    font-family: Arial, sans-serif; /* Fonte principal */
+    background-color: #000; /* Fundo preto */
+    color: white; /* Texto branco */
+    margin: 0; /* Remover margens padrão */
+    padding: 0; /* Remover padding padrão */
+}
+
+/* Container principal centralizado */
+.container {
+    width: 90%; /* Usar 90% da tela */
+    max-width: 1200px; /* Máximo de 1200px de largura */
+    margin: 0 auto; /* Centralizar o container */
+    text-align: center; /* Centralizar o conteúdo */
+    padding: 20px;
+}
+
+/* Título principal */
+.leaderboard-title {
+    font-size: 3.5em; /* Tamanho grande */
+    margin-bottom: 10px; /* Espaço inferior */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+}
+
+/* Subtítulo */
+.subtitle {
+    font-size: 1.5em; /* Tamanho intermediário */
+    margin-bottom: 30px; /* Espaçamento maior */
+    font-weight: 300; /* Mais leve */
+    color: #CCC; /* Cor cinza claro */
+}
+
+/* Estilização da seção do pódio */
+.podium {
+    display: flex; /* Usar flexbox */
+    justify-content: space-around; /* Espaço ao redor */
+    align-items: flex-end; /* Alinhamento inferior */
+    margin-bottom: 40px; /* Espaço inferior */
+}
+
+/* Itens do pódio */
+.podium-item {
+    position: relative; /* Para ajuste de posicionamento */
+    text-align: center; /* Centralizar texto */
+    margin: 0 15px; /* Margem entre itens */
+}
+
+/* Tamanhos diferentes para os vencedores */
+.first {
+    order: 0; /* Ficar no centro */
+    font-size: 1.8em; /* Tamanho maior */
+}
+
+.second {
+    order: -1; /* Ficar à esquerda */
+    font-size: 1.4em; /* Tamanho médio */
+}
+
+.third {
+    order: 1; /* Ficar à direita */
+    font-size: 1.2em; /* Tamanho menor */
+}
+
+/* Imagem do avatar */
+.avatar-container {
+    width: 120px; /* Largura */
+    height: 120px; /* Altura */
+    margin-bottom: 15px; /* Espaçamento inferior */
+}
+
+.avatar {
+    border-radius: 50%; /* Formato circular */
+    object-fit: cover; /* Para ajustar a imagem dentro */
+}
+
+/* Estilo para as posições (números) */
+.podium-item h2 {
+    margin: 10px 0;
+    font-size: 2.5em; /* Tamanho grande */
+    font-weight: bold; /* Negrito */
+}
+
+/* Pontuação */
+.podium-item .points {
+    font-size: 1.8em; /* Destaque nas pontuações */
+    font-weight: bold;
+}
+
+/* Nome do jogador */
+.podium-item p {
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+/* Lista de ranking */
+.ranking {
+    max-width: 600px; /* Limitando a largura */
+    margin: 0 auto;
+    text-align: left; /* Alinhado à esquerda */
+    padding: 20px; /* Espaçamento interno */
+}
+
+/* Itens individuais do ranking */
+.ranking-item {
+    display: flex; /* Flexbox para alinhar os itens */
+    justify-content: space-between; /* Espaçar nome e pontos */
+    padding: 10px 0; /* Espaçamento superior/inferior */
+    border-bottom: 1px solid #333; /* Linha divisória */
+    font-size: 1.2em; /* Tamanho padrão */
+}
+
+/* Texto de destaque ao final */
+.highlight {
+    font-size: 1.4em;
+    font-weight: bold; /* Negrito */
+    margin-top: 30px; /* Espaçamento superior */
+    color: #FFCC00; /* Cor destacada */
+}
+

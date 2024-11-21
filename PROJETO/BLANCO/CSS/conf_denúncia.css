@@ -1,0 +1,211 @@
+/* Zera as margens e preenchimentos de todos os elementos e define o box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do body */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    background-color: #181818; /* Fundo escuro */
+    color: white; /* Texto branco */
+    padding: 20px; /* Espaçamento interno */
+}
+
+/* Define um grid para o contêiner principal */
+.container {
+    display: grid; /* Usa grid layout */
+    grid-template-columns: 1fr; /* Duas colunas iguais */
+    gap: 20px; /* Espaçamento entre os elementos */
+    max-width: 1000px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza o contêiner */
+}
+
+/* Estilo da seção de denúncias recentes */
+.recent-reports {
+    display: flex; /* Usa layout flexível */
+    background-color: #222; /* Fundo mais escuro */
+    padding: 30px; /* Preenchimento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Estilo para a imagem da denúncia e avaliação */
+.report-image {
+    flex: 1; /* Ocupa 1 parte do espaço disponível */
+    display: flex;
+    flex-direction: column; /* Coloca o conteúdo em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    background-color: #333; /* Fundo escuro */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 15px; /* Preenchimento interno */
+    margin-right: 20px; /* Espaço à direita */
+}
+
+/* Estiliza a imagem da denúncia */
+.report-image img {
+    max-width: 100%; /* Define a largura máxima como 100% */
+    border-radius: 10px; /* Bordas arredondadas na imagem */
+    margin-bottom: 10px; /* Espaço inferior */
+}
+
+/* Estilo da avaliação por estrelas */
+.stars {
+    text-align: center; /* Centraliza o texto */
+    color: yellow; /* Cor das estrelas */
+}
+
+/* Define os espaçamentos entre os textos na seção de estrelas */
+.stars p {
+    margin: 5px 0; /* Margens verticais de 5px */
+}
+
+/* Seção dos comentários */
+.comments-section {
+    flex: 2; /* Ocupa 2 partes do espaço disponível */
+}
+
+/* Título dos comentários */
+.comments-section h2 {
+    margin-bottom: 15px;
+    font-size: 24px; /* Tamanho da fonte */
+}
+
+/* Cada comentário individual */
+.comment {
+    background-color: #333; /* Fundo escuro */
+    padding: 15px; /* Preenchimento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    margin-bottom: 15px; /* Espaçamento inferior */
+}
+
+/* Nome do autor do comentário */
+.comment h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Seção do formulário de denúncia */
+.form-section {
+    grid-column: span 2; /* Ocupa duas colunas */
+    background-color: #222; /* Fundo escuro */
+    padding: 20px; /* Preenchimento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    margin-top: 20px; /* Espaçamento superior */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Título do formulário */
+.form-section h2 {
+    margin-bottom: 15px; /* Espaçamento inferior */
+    font-size: 24px; /* Tamanho da fonte */
+}
+
+/* Estilo de grupo de formulário (checkboxes) */
+.form-group {
+    margin-bottom: 10px; /* Espaçamento inferior */
+    text-align: left; /* Alinhamento à esquerda */
+}
+
+/* Espaçamento à direita dos checkboxes */
+.form-group input {
+    margin-right: 10px;
+}
+
+/* Estilo da caixa de texto (textarea) */
+textarea {
+    width: 100%; /* Largura total */
+    height: 100px; /* Altura da caixa */
+    padding: 10px; /* Preenchimento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: none; /* Sem bordas */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Seção de avaliação por estrelas */
+.rating {
+    display: flex; /* Usa layout flexível */
+    justify-content: center; /* Centraliza as estrelas */
+    margin-bottom: 10px; /* Espaçamento inferior */
+    flex-direction: row-reverse; /* Inverte a ordem das estrelas */
+}
+
+/* Oculta o input de estrelas (radio buttons) */
+.rating input {
+    display: none;
+}
+
+/* Estilo padrão das estrelas */
+.rating label {
+    font-size: 30px; /* Tamanho das estrelas */
+    color: #ccc; /* Cor cinza claro */
+    cursor: pointer; /* Cursor de clique */
+}
+
+/* Define a cor amarela para as estrelas selecionadas */
+.rating input:checked ~ label {
+    color: yellow;
+}
+
+/* Aplica efeito de hover nas estrelas */
+.rating label:hover,
+.rating label:hover ~ label {
+    color: yellow;
+}
+
+/* Estilo do botão de envio */
+button {
+    padding: 10px 20px; /* Preenchimento interno */
+    background-color: #444; /* Fundo escuro */
+    color: white; /* Texto branco */
+    border: none; /* Sem bordas */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de clique */
+}
+
+/* Cor de fundo do botão ao passar o mouse */
+button:hover {
+    background-color: #555;
+}
+.alert-box {
+    position: fixed;
+    top: 40%; /* Um pouco acima do centro */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+}
+/*bloco de aviso */
+
+.alert-box h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #181818;
+}
+
+.alert-box p {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #181818;
+}
+
+.alert-box button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: rgb(28, 28, 28);
+    color: rgb(234, 234, 234);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.alert-box button:hover {
+    background-color: gray;
+}
