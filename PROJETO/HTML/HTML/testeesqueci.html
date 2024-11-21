@@ -1,0 +1,117 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharkwave Login</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #1c1c1c;
+    color: #fff;
+    background-image: url('../IMAGENS/background2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+h2{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+header {
+    background: #000;
+    padding: 10px 20px;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.login-box {
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #000;
+    width: 300px;
+}
+
+.login-box h2 {
+    margin-bottom: 15px;
+}
+
+.login-box input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-box button {
+    width: 95%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: #717171;
+    color: #f1f1f1;
+    
+}
+
+.recuperar, .back-button {
+    background: #a4a4a4;
+    color: #1c1c1c;
+   
+}
+.logocentro{
+    position: absolute;
+    top: 67%;
+    right: 43%;
+}
+
+    </style>
+</head>
+<body>
+    
+    <main class="login-container">
+        
+        <div class="login-box">
+            <h2>RECUPERAR SENHA</h2>
+            <form>
+                <label for="cpf">EMAIL CADASTRADO</label>
+                <input type="text" id="cpf" placeholder="gustavo.costa@gmail.com">
+                
+                <button type="submit" class="recuperar">RECUPERAR SENHA </button>
+                
+            </form>
+            <button class="back-button">VOLTAR</button>
+        </div>
+        <div class="logocentro">
+            <img src="../IMAGENS/logocontornobrilho350.png" alt="Sharkwave">
+        </div>
+    </main>
+        
+    
+</body>
+</html>

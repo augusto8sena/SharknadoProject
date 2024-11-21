@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas ADM</title>
+    <link rel="stylesheet" href="astyles.css">
+    <style>
+        /* Reset básico */
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: #71568C;
+    color: white;
+    padding: 1rem;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background: #71568C;
+    padding: 1rem;
+}
+
+.menu-imagens-esquerda,
+.menu-imagens-direita {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.menu-imagens-esquerda img,
+.menu-imagens-direita img {
+    width: 50px; 
+    height: auto;
+    border-radius: 5px; 
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-grow: 1; 
+    margin: 0 1rem;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: normal;
+    transition: color 0.3s;
+    padding: 0.5rem 0.8rem;
+    font-family: "Koulen", serif;
+    font-size: 1.4em
+
+}
+
+.menu li a:hover {
+    color:#C7E0A9;
+}
+
+
+
+main {
+    display: flex;
+    margin: 2rem;
+}
+
+
+.coluna-esquerda, .coluna-direita {
+    padding: 1rem;
+}
+
+.coluna-esquerda {
+    flex: 2;
+    border-right: 2px solid #ccc;
+    margin-right: 1rem;
+}
+
+.coluna-consulta {
+    flex: 2;
+    border-right: 2px solid #ccc;
+    margin-right: 1rem;
+    justify-content: center;
+}
+
+
+.coluna-direita {
+    flex: 1;
+    background-color: #EBE4F2; 
+}
+
+
+.coluna-direita .imagem img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #71568C; 
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.coluna-esquerda p {
+    font-size: 1.2em;
+    font-family: "Varela Round", sans-serif;
+}
+
+.coluna-esquerda h1 {
+    text-align: center; 
+    margin: 0; 
+    font-size: 4.0em;
+    font-family: "Koulen", serif;
+}
+.coluna-esquerda h4 {
+    text-align: left; 
+    margin: 0;
+    font-size: 1.7em;
+    font-family: "Koulen", serif;
+    font-weight: 600;
+}
+
+.coluna-esquerda h2 {
+    text-align: center;
+    margin: 0;
+    font-style: italic; 
+    font-size: 1.2em;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 600;
+}
+
+
+.coluna-esquerda h3 {
+    text-align: center; 
+    margin: 0; 
+    font-size: Livvic;
+}
+
+.coluna-esquerda h5 {
+    text-align: center;
+    margin: 0;
+}
+
+
+footer {
+    background-color: #71568C; 
+    padding: 1rem;
+    text-align: center; 
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0; 
+    color: white; 
+    font-size: 1.2em;
+    font-family: "Koulen", serif;
+}
+
+
+.containerConsultas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.botaoCons {
+    background-color: #EBE4F2;
+    color:black;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    border:2px solid #71568C;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    justify-content: center;
+    
+}
+
+.botaoCons:hover {
+    background-color: #71568C;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.h1Cons {
+    color: black;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: "Koulen", serif;
+    font-size: 4.0em;
+
+}
+
+.h2Cons {
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 300;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    background-color: #EBE4F2;
+    color: black;
+    padding: 10px 10px;
+    border:2px solid #71568C;
+    border-radius: 5px;
+    font-size: 1em;
+    position: absolute; 
+    top: 947px; 
+    right: 38%;
+    cursor: pointer;
+    font-family: "Varela Round", sans-serif;
+}
+
+.contact1 {
+    display: flex;
+    flex-direction: column;
+    background-color: #EBE4F2;
+    color: black;
+    padding: 10px 10px;
+    border:2px solid #71568C;
+    border-radius: 5px;
+    font-size: 1em;
+    position: absolute; 
+    top: 1125px; 
+    right: 38%;
+    cursor: pointer;
+    font-family: "Varela Round", sans-serif;
+}
+.contact:hover {
+    background-color: #3c2a5d;
+    color: white;
+}
+.contact1:hover {
+    background-color: #3c2a5d;
+    color: white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Duas colunas */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Coluna Esquerda */
+.coluna-esquerda .perfil {
+    background-color: #efe6f5;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-header {
+    text-align: center;
+}
+
+.perfil-header h1 {
+    text-align: center; 
+    margin: 0;
+    font-size: 2.0em;
+    font-family: "Koulen", serif;
+    font-weight: 600;
+    color: #6b4b8c;;
+}
+
+.informacoes {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.campo h4 {
+    text-align: left; 
+    margin: 0;
+    font-size: 1.0em;
+    font-family: "Varela Round", sans-serif;
+    font-weight: bolder;
+}
+
+.campo p {
+    color: #000000;
+    font-size: 1.0em;
+    margin-bottom: 15px;
+    font-family: "Varela Round", sans-serif;
+}
+
+/* Coluna Direita */
+.coluna-direita-p .imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coluna-direita-p .imagem img {
+    max-width: 100%;
+    border: 2px solid #6b4b8c;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+}
+
+.botoes-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaço entre os botões */
+    margin-top: 20px;
+}
+
+.botao {
+    background-color: #000; /* Cor de fundo preta */
+    color: #fff; /* Texto branco */
+    border: none; /* Remove a borda */
+    border-radius: 20px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #333; /* Cor mais clara no hover */
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu-container">
+            <div class="menu-imagens-esquerda">
+                <img src="../mídias/logo1.png" alt="Logo 1">
+                <img src="../mídias/logo2.png" alt="Logo 2">
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="homepage.html">HOMEPAGE</a></li>
+                    <li><a href="sobre.html">SOBRE</a></li>
+                    <li><a href="feed.html">FEED</a></li>
+                    <li><a href="index.html">RECURSOS</a></li>
+                    <li><a href="desafios.html">DESAFIOS</a></li>
+                    <li><a href="index.html">CERTIFICADOS E PARCEIROS</a></li>
+                    <li><a href="consultas.html">CONSULTAS</a></li>
+                    <li><a href="projetos.html">PROJETOS</a></li>
+                </ul>
+            </nav>
+            <div class="menu-imagens-direita">
+                <img src="../mídias/home.png" alt="Símbolo home">
+                <img src="../mídias/user.png" alt="Símbolo user">
+                <img src="../mídias/documento.png" alt="Símbolo documento">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="grid-container">
+            <!-- Coluna Esquerda -->
+            <div class="coluna-esquerda">
+                <div class="perfil">
+                    <div class="perfil-header">
+                        <h1>USUARIO</h1>
+                    </div>
+                    <div class="informacoes">
+                        <div class="campo">
+                            <h4>Nome exibido</h4>
+                            <p>Usuário</p>
+                            <div class="form-group">
+                                <label for="cep">USUARIO</label>
+                                <input type="text" id="cep" placeholder="livscle">
+                                <img src="../IMAGENS/editar35.png">
+                            </div>
+                            
+                        <div class="campo">
+                            <h4>Nome de usuário</h4>
+                            <p>@usuario</p>
+                        </div>
+                        <div class="campo">
+                            <h4>E-mail</h4>
+                            <p>usuario@gmail.com</p>
+                        </div>
+                        <div class="campo">
+                            <h4>Telefone</h4>
+                            <p>(99) 99999-9999</p>
+                        </div>
+                        <div class="campo">
+                            <h4>CPF</h4>
+                            <p>999.999.999-99</p>
+                        </div>
+                        <div class="botoes-container">
+                            <button class="botao salvar">SALVAR ALTERAÇÕES</button>
+                            <button class="botao excluir">EXCLUIR PERFIL</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Coluna Direita -->
+            <div class="coluna-direita-p">
+                <div class="imagem">
+                    <img src="../mídias/fotouser.png" alt="Imagem 1">
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<footer>
+    <p>© Todos os direitos reservados - Triple Core</p>
+</footer>
+</html><div class="form-group">
+                                <label for="senha">Senha</label>
+                                <input type="password" id="senha" placeholder="********">
+                                <img src="../IMAGENS/editar35.png">
+                        </div>

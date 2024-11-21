@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil e Relatórios</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #1c1c1c;
+    color: #000000;
+    background-image: url('../IMAGENS/background2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #cacaca;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section div {
+            flex: 1;
+            margin: 0 10px;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 80%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .reports {
+            margin-top: 20px;
+        }
+
+        .report-card {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .report-card span {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .report-card button {
+            background: #535353;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        
+
+        .saldo {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .compras {
+            margin-top: 20px;
+        }
+
+        .compras ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .compras li {
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .shark-logo {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .shark-logo img {
+            width: 100px;
+        }
+
+        .back-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .back-button a:hover {
+            background: #555;
+        }
+
+        p{
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Perfil e Relatórios</h1>
+        <div class="section">
+            <div>
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" placeholder="000.000.000-00"><img src="../IMAGENS/editar35.png">
+                    
+                </div>
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" placeholder="Augusto Sena">
+                    <img src="../IMAGENS/editar35.png">
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="text" id="telefone" placeholder="(00) 00000-0000">
+                    <img src="../IMAGENS/editar35.png">
+                </div>
+            
+                <div class="form-group">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" placeholder="12345-678">
+                    <img src="../IMAGENS/editar35.png">
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="********">
+                    <img src="../IMAGENS/editar35.png">
+                </div>
+            </div>
+            <p> <img src="../IMAGENS/ituanoituanoperfil350.png"></p> 
+        </div>
+
+        <div class="reports">
+            <div class="report-card">
+                <span>MAR: 4400L</span>
+                <button>+34 SP</button>
+            </div>
+            <div class="report-card">
+                <span>FEV: 4370L</span>
+                <button>+44 SP</button>
+            </div>
+            <div class="report-card">
+                <span>JAN: 4498L</span>
+                <button>+23 SP</button>
+            </div>
+        </div>
+
+        <div class="saldo">Saldo Atual: 196 SP</div>
+
+        <div class="compras">
+            <h3>Últimas Compras</h3>
+            <ul>
+                <li>Netflix - 47SP - COD: 1234-4317-4323-4313</li>
+                <li>Netflix - 47SP - COD: 2549-2544-4233-9875</li>
+            </ul>
+        </div>
+
+        <div class="shark-logo">
+            <img src="../IMAGENS/sharknadologocinza.png" alt="Sharknado Logo">
+        </div>
+
+        <div class="back-button">
+            <a href="#">Voltar</a>
+        </div>
+    </div>
+</body>
+</html>
