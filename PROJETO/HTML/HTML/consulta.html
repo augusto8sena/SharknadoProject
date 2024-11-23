@@ -5,26 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página Completa</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+    /* Importando fonte Rubik */
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
 
-
-.rubik-<uniquifier> {
-  font-family: "Rubik", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal
-}
-        body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #1c1c1c;
-    color: #fff;
-    background-image: url('../IMAGENS/background2.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-}
-    
+    /* Estilização global */
+    body {
+      margin: 0;
+      font-family: 'Rubik', sans-serif;
+      background: #1c1c1c url('../IMAGENS/background2.jpg') no-repeat fixed;
+      background-size: cover;
+      color: #fff;
+    }
 
     .container {
       max-width: 800px;
@@ -39,89 +30,11 @@
       text-align: center;
       font-size: 1.5em;
       margin-bottom: 20px;
-      font-size: large;
+      font-weight: 500;
     }
 
-    /* Últimas Compras */
-    .card {
-      background-color: #2a2a2a;
-      padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    }
-
-    .user-info {
-      display: flex;
-      align-items: center;
-    }
-
-    .avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: #555;
-      margin-right: 10px;
-    }
-
-    .user-details {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .name {
-      font-weight: bold;
-      font-size: 1.1em;
-    }
-
-    .cpf {
-      font-size: 0.9em;
-      color: #aaa;
-    }
-
-    .details {
-      font-size: 0.9em;
-      color: #bbb;
-    }
-
-    .footer {
-      text-align: center;
-      margin-top: 15px;
-      font-size: 0.9em;
-      color: #aaa;
-    }
-
-    .footer span {
-      font-weight: bold;
-      color: #fff;
-    }
-
-    .icons {
-      display: inline-flex;
-      align-items: center;
-      margin-top: 10px;
-      justify-content: center;
-    }
-
-    .icon {
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-      background-color: #555;
-      margin: 0 5px;
-    }
-
-    /* Usuários Cadastrados */
-    .user-table {
-      width: 100%;
-      border-spacing: 0;
-      border-collapse: collapse;
-    }
-
-    .user-row {
+    /* Estilização geral para itens */
+    .item-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -129,9 +42,10 @@
       padding: 15px;
       border-radius: 8px;
       margin-bottom: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     }
 
-    .sp {
+    .details {
       font-size: 0.9em;
       color: #aaa;
     }
@@ -168,12 +82,12 @@
       background-color: #a71d2a;
     }
 
-    /* Denúncias */
-    .denuncias-section {
-      margin-top: 20px;
-      text-align: center;
-      font-size: 1.2em;
-      color: #aaa;
+    .send-btn {
+      background-color: #28a745;
+    }
+
+    .send-btn:hover {
+      background-color: #1c7c31;
     }
   </style>
 </head>
@@ -181,46 +95,25 @@
   <!-- Últimas Compras -->
   <div class="container">
     <div class="title">ÚLTIMAS COMPRAS</div>
-
-    <div class="card">
-      <div class="user-info">
-        <div class="avatar"></div>
-        <div class="user-details">
-          <div class="name">AUGUSTO</div>
-          <div class="cpf">923.932.873-91</div>
-          <div class="details">1 MÊS - NETFLIX - 47SP</div>
-        </div>
+    <div class="item-row">
+      <div>
+        <strong>AUGUSTO</strong> <br>
+        <span class="details">CPF: 923.932.873-91</span> <br>
+        <span class="details">1 MÊS - NETFLIX - 47SP</span>
       </div>
     </div>
-
-    <div class="card">
-      <div class="user-info">
-        <div class="avatar"></div>
-        <div class="user-details">
-          <div class="name">DIEGO</div>
-          <div class="cpf">993.672.803-99</div>
-          <div class="details">1 MÊS - HBO MAX - 32SP</div>
-        </div>
+    <div class="item-row">
+      <div>
+        <strong>DIEGO</strong> <br>
+        <span class="details">CPF: 993.672.803-99</span> <br>
+        <span class="details">1 MÊS - HBO MAX - 32SP</span>
       </div>
     </div>
-
-    <div class="card">
-      <div class="user-info">
-        <div class="avatar"></div>
-        <div class="user-details">
-          <div class="name">ISADORA</div>
-          <div class="cpf">873.672.303-08</div>
-          <div class="details">1 MÊS - AMAZON - 39SP</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer">
-      +120 PEDIDOS - <span>VER MAIS</span>
-      <div class="icons">
-        <div class="icon"></div>
-        <div class="icon"></div>
-        <div class="icon"></div>
+    <div class="item-row">
+      <div>
+        <strong>ISADORA</strong> <br>
+        <span class="details">CPF: 873.672.303-08</span> <br>
+        <span class="details">1 MÊS - AMAZON - 39SP</span>
       </div>
     </div>
   </div>
@@ -228,48 +121,30 @@
   <!-- Usuários Cadastrados -->
   <div class="container">
     <div class="title">USUÁRIOS CADASTRADOS</div>
-
-    <div class="user-row">
-      <div class="user-info">
-        <div class="avatar"></div>
-        <div class="name">ÍTALO</div>
-        <div class="sp">325SP</div>
+    <div class="item-row">
+      <div>
+        <strong>ÍTALO</strong> <br>
+        <span class="details">325SP</span>
       </div>
       <div class="actions">
         <a class="button reset-btn" href="#">RESETAR SP</a>
         <a class="button delete-btn" href="#">EXCLUIR</a>
       </div>
     </div>
-
-    <div class="user-row">
-      <div class="user-info">
-        <div class="avatar"></div>
-        <div class="name">MIGUEL</div>
-        <div class="sp">295SP</div>
+    <div class="item-row">
+      <div>
+        <strong>MIGUEL</strong> <br>
+        <span class="details">295SP</span>
       </div>
       <div class="actions">
         <a class="button reset-btn" href="#">RESETAR SP</a>
         <a class="button delete-btn" href="#">EXCLUIR</a>
       </div>
     </div>
-
-    <div class="user-row">
-      <div class="user-info">
-        <div class="avatar"></div>
-        <div class="name">DIEGO</div>
-        <div class="sp">287SP</div>
-      </div>
-      <div class="actions">
-        <a class="button reset-btn" href="#">RESETAR SP</a>
-        <a class="button delete-btn" href="#">EXCLUIR</a>
-      </div>
-    </div>
-
-    <div class="user-row">
-      <div class="user-info">
-        <div class="avatar"></div>
-        <div class="name">AUGUSTO</div>
-        <div class="sp">267SP</div>
+    <div class="item-row">
+      <div>
+        <strong>DIEGO</strong> <br>
+        <span class="details">287SP</span>
       </div>
       <div class="actions">
         <a class="button reset-btn" href="#">RESETAR SP</a>
@@ -280,7 +155,34 @@
 
   <!-- Denúncias -->
   <div class="container">
-    <div class="denuncias-section">DENÚNCIAS</div>
+    <div class="title">DENÚNCIAS</div>
+    <div class="item-row">
+      <div>
+        <strong>ANÔNIMO</strong> <br>
+        <span class="details">"Moradores da Rua das Palmeiras, no bairro Jardim Vista,<br> estão sofrendo com a falta constante de água potável. Pedimos providências urgentes para normalizar o fornecimento."</span>
+      </div>
+      <div>
+        <a class="button send-btn" href="#">ENVIAR</a>
+      </div>
+    </div>
+    <div class="item-row">
+      <div>
+        <strong>CAMILLA</strong> <br>
+        <span class="details">"Na Rua Rio Bonito, bairro Vila Esperança, há esgoto a céu aberto, causando mau cheiro e riscos à saúde. Solicitamos uma solução imediata."</span>
+      </div>
+      <div>
+        <a class="button send-btn" href="#">ENVIAR</a>
+      </div>
+    </div>
+    <div class="item-row">
+      <div>
+        <strong>AGNALDO</strong> <br>
+        <span class="details">"Um grande vazamento de água na Avenida das Hortênsias, próximo ao número 452, está desperdiçando recursos valiosos. Por favor, realizem o reparo urgente."</span>
+      </div>
+      <div>
+        <a class="button send-btn" href="#">ENVIAR</a>
+      </div>
+    </div>
   </div>
 </body>
 </html>
