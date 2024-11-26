@@ -5,6 +5,7 @@ body {
     align-items: center; 
     height: 100vh; 
     margin: 0;
+    font-family: "Rubik", sans-serif;
 }
 
 .caixa {
@@ -17,6 +18,9 @@ body {
     align-items: center;
     z-index: 0;
     border-radius: 20px;
+}
+h1 {
+    text-align: center;
 }
 .caixa2 {
     width: 45%;         
@@ -39,7 +43,7 @@ body {
     border: 5px; 
     cursor: pointer; 
     font-size: 20px;
-    border-radius: 20px; 
+    border-radius: 10px; 
     text-decoration: none;
     margin-left: 250px;
 }
@@ -133,7 +137,7 @@ body {
     border: 5px; 
     cursor: pointer; 
     font-size: 20px;
-    border-radius: 20px; 
+    border-radius: 10px; 
     text-decoration: none;
     margin-left: 100px;
 }

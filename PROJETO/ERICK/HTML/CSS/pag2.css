@@ -5,18 +5,24 @@ body {
     align-items: center; 
     height: 100vh; 
     margin: 0;
+    font-family: "Rubik", sans-serif;
 }
 
 .caixa {
     width: 37%;         
     height: 470px;          
-    background-color:#aeabab; 
+    background-color:#d3d0d0; 
     padding: 20px;                     
     position: absolute;
     justify-content: center;
     align-items: center;
     z-index: 0;
     border-radius: 20px;
+}
+
+h1 {
+    text-align: center;
+    letter-spacing: 2px;
 }
 
 .button {
@@ -26,7 +32,7 @@ body {
     border: 5px; 
     cursor: pointer; 
     font-size: 20px;
-    border-radius: 20px; 
+    border-radius: 10px; 
     text-decoration: none;
     margin-left: 250px;
 }
@@ -116,7 +122,10 @@ body {
 }
 
 .adicionar {
-    color: rgb(3, 3, 3); 
+    background-color: #9e9b9b;
+    color: rgb(3, 3, 3);
+    padding: 10px, 20px;
+    border-radius: 5px;
     cursor: pointer; 
     font-size: 20px;
     text-decoration: none;
