@@ -10,7 +10,7 @@ body {
 
 .caixa {
     width: 80%;         
-    height: 610px;          
+    height: 670px;          
     background-color:#aeabab; 
     padding: 20px;                     
     position: absolute;
@@ -28,4 +28,15 @@ body {
 }
 h1 {
     text-align: center;
+}
+
+.logo {
+    width: 0px; 
+    height: 0px;
+    margin-right: 0px;
+    top: 560px;
+    z-index: 1;
+    position: absolute;
+    bottom: 150px;
+    right: 280px;
 }

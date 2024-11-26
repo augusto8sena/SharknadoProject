@@ -93,7 +93,7 @@ h1 {
 .logo {
     width: 0px; 
     height: 0px;
-    margin-right: 0px;
+    top: 380px;
     z-index: 1;
     position: absolute;
     bottom: 150px;
