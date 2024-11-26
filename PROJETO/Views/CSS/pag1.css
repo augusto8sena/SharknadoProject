@@ -2,17 +2,27 @@
     color:white;
 }
 
+.container {
+    display: grid;
+    grid-template-rows: 60px 1fr 40px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer"; 
+    height: 100vh; 
+}
+
 body {
     background-color: #252424;
     display: flex;
     justify-content: center; 
     align-items: center; 
-    height: 100vh; 
-    margin: 0;
+    height: 100vh;
     font-family: "Rubik", sans-serif;
 }
 
-.caixa {
+.main {
     width: 35%;         
     height: 200px;          
     background-color:#333; 
@@ -55,11 +65,61 @@ body {
 }
 .logo {
     position: relative;
-    width: 0px; 
-    height: 0px;
-    margin-right: 300px;
-    margin-top: 15px;
-    z-index: 1;
+    margin-right: 4px; 
 }
 
 
+/*rodapé*/
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #282828;
+    padding-left: 130px;
+    color: white;
+    font-family: Arial, sans-serif;
+   
+  }
+  
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo {
+    width: 170px;
+    margin-bottom: 15px;
+  }
+  
+  .contact-info {
+    line-height: 1.0;
+    
+  }
+  
+  .contact-title {
+    font-weight: bold;
+    margin-bottom: 25px;
+    font-size: 18px;
+  
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+    
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-right .logo-adicional {
+    width: 300px;
+  
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
