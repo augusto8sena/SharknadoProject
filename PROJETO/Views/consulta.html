@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Completa</title>
+  <style>
+    /* Importando fonte Rubik */
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+
+    .header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px; /* Ajuste a altura da logo */
+  margin-right: 10px;
+  object-fit: contain; /* Garante que a imagem não distorça */
+}
+
+.site-title {
+  font-size: 1.5em;
+  margin: 0;
+  color: #fff;
+}
+
+.site-title {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-actions a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.login-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.profile-icon {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  color: #fff;
+}
+
+    .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282828;
+  padding-left: 130px;
+  color: white;
+  font-family: Arial, sans-serif;
+ 
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  /* Organiza os elementos verticalmente na esquerda */
+}
+
+.logo {
+  width: 170px;
+  /* Define a largura do logotipo da esquerda */
+  margin-bottom: 15px;
+  /* Espaçamento abaixo do logotipo */
+}
+
+.contact-info {
+  line-height: 1.0;
+  
+}
+
+.contact-title {
+  font-weight: bold;
+  margin-bottom: 25px;
+  font-size: 18px;
+
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.footer-right .logo-adicional {
+  width: 300px;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.contact-info p i {
+  margin-right: 5px;
+}
+
+    body {
+      margin: 0;
+      font-family: 'Rubik', sans-serif;
+      background: #1c1c1c url('../IMAGENS/background2.jpg') no-repeat fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .title {
+      text-align: center;
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    /* Estilização geral para itens */
+    .item-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #2a2a2a;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .details {
+      font-size: 0.9em;
+      color: #aaa;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .button {
+      padding: 8px 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 0.9em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .reset-btn {
+      background-color: #007bff;
+    }
+
+    .reset-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .delete-btn {
+      background-color: #dc3545;
+    }
+
+    .delete-btn:hover {
+      background-color: #a71d2a;
+    }
+
+    .send-btn {
+      background-color: #28a745;
+    }
+
+    .send-btn:hover {
+      background-color: #1c7c31;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <img src="../IMAGENS/sharknadologocinza750.png" alt="Logo Sharknado" class="logo">
+      <h1 class="site-title">SHARKWAVE</h1>
+    </div>
+    <nav class="nav-menu">
+      <a href="#">HOME</a>
+      <a href="#">SOBRE</a>
+      <a href="#">RANKING</a>
+      <a href="#">SHARKPOINTS</a>
+      <a href="#">RECLAMAÇÕES</a>
+      <a href="#">DICAS</a>
+    </nav>
+    <div class="user-actions">
+      <a href="#">CADASTRE-SE</a>
+      <button class="login-button">ENTRAR</button>
+      <div class="profile-icon">👤</div>
+    </div>
+  </header>
+  <div style="background-color: #000; color: #fff; text-align: center; padding: 5px 0; font-size: 0.9em;">
+    <span style="margin: 0 15px;">AJUDE A SALVAR O MEIO AMBIENTE</span>
+    <span style="margin: 0 15px;">CUPONS E PROMOÇÕES SEMANAIS</span>
+    <span style="margin: 0 15px;">ITU E REGIÃO</span>
+  </div>
+
+  
+  <!-- Últimas Compras -->
+  <div class="container">
+    <div class="title">ÚLTIMAS COMPRAS</div>
+    <div class="item-row">
+      <div>
+        <strong>AUGUSTO</strong> <br>
+        <span class="details">CPF: 923.932.873-91</span> <br>
+        <span class="details">1 MÊS - NETFLIX - 47SP</span>
+      </div>
+    </div>
+    <div class="item-row">
+      <div>
+        <strong>DIEGO</strong> <br>
+        <span class="details">CPF: 993.672.803-99</span> <br>
+        <span class="details">1 MÊS - HBO MAX - 32SP</span>
+      </div>
+    </div>
+    <div class="item-row">
+      <div>
+        <strong>ISADORA</strong> <br>
+        <span class="details">CPF: 873.672.303-08</span> <br>
+        <span class="details">1 MÊS - AMAZON - 39SP</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Usuários Cadastrados -->
+  <div class="container">
+    <div class="title">USUÁRIOS CADASTRADOS</div>
+    <div class="item-row">
+      <div>
+        <strong>ÍTALO</strong> <br>
+        <span class="details">325SP</span>
+      </div>
+      <div class="actions">
+        <a class="button reset-btn" href="#">RESETAR SP</a>
+        <a class="button delete-btn" href="#">EXCLUIR</a>
+      </div>
+    </div>
+    <div class="item-row">
+      <div>
+        <strong>MIGUEL</strong> <br>
+        <span class="details">295SP</span>
+      </div>
+      <div class="actions">
+        <a class="button reset-btn" href="#">RESETAR SP</a>
+        <a class="button delete-btn" href="#">EXCLUIR</a>
+      </div>
+    </div>
+    <div class="item-row">
+      <div>
+        <strong>DIEGO</strong> <br>
+        <span class="details">287SP</span>
+      </div>
+      <div class="actions">
+        <a class="button reset-btn" href="#">RESETAR SP</a>
+        <a class="button delete-btn" href="#">EXCLUIR</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Denúncias -->
+  <div class="container">
+    <div class="title">DENÚNCIAS</div>
+    <div class="item-row">
+      <div>
+        <strong>ANÔNIMO</strong> <br>
+        <span class="details">"Moradores da Rua das Palmeiras, no bairro Jardim Vista, estão sofrendo com a falta constante de água potável.<br> Pedimos providências urgentes para normalizar o fornecimento."</span>
+      </div>
+      <div>
+        <a class="button send-btn" href="#">ENVIAR</a>
+      </div>
+    </div>
+    <div class="item-row">
+      <div>
+        <strong>CAMILLA</strong> <br>
+        <span class="details">"Na Rua Rio Bonito, bairro Vila Esperança, há esgoto a céu aberto, causando mau cheiro e riscos à saúde.<br> Solicitamos uma solução imediata."</span>
+      </div>
+      <div>
+        <a class="button send-btn" href="#">ENVIAR</a>
+      </div>
+    </div>
+    <div class="item-row">
+      <div>
+        <strong>AGNALDO</strong> <br>
+        <span class="details">"Um grande vazamento de água na Avenida das Hortênsias, próximo ao número 452,<br> está desperdiçando recursos valiosos. Por favor, realizem o reparo urgente."</span>
+      </div>
+      <div>
+        <a class="button send-btn" href="#">ENVIAR</a>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+
+    <div class="footer-left">
+
+      <img src="../IMAGENS/SAAEOK.png" alt="SAAE Salto" class="logo">
+
+      <div class="contact-info">
+
+        <p class="contact-title">
+          FALE CONOSCO
+        </p>
+
+        <p>
+          <i class="fas fa-home"></i>
+          R. Nove de Julho, 1033 - Centro, Salto - SP, 13320-005
+        </p>
+
+        <p>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:ouvidoria@saaesalto.sp.gov.br">
+            ouvidoria@saaesalto.sp.gov.br
+          </a>
+        </p>
+
+        <p>
+          <i class="fas fa-phone"\></i>
+          0800 7796 300
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-right">
+
+      <img src="../IMAGENS/SENAassinatura.png" alt="assinatura" class="logo-adicional">
+
+    </div>
+  </footer>
+</body>
+</html>
