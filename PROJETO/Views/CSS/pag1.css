@@ -9,6 +9,7 @@ body {
     align-items: center; 
     height: 100vh; 
     margin: 0;
+    font-family: "Rubik", sans-serif;
 }
 
 .caixa {
@@ -22,7 +23,6 @@ body {
     z-index: 0;
     border-radius: 20px; 
 }
-
 .button {
     background-color: #040404; 
     color: rgb(251, 247, 247); 
@@ -30,7 +30,7 @@ body {
     border: 5px; 
     cursor: pointer; 
     font-size: 16px;
-    border-radius: 20px; 
+    border-radius: 10px; 
     text-decoration: none;
     
 }
@@ -43,7 +43,7 @@ body {
     cursor: pointer; 
     font-size: 16px;
     margin-left: 160px;
-    border-radius: 20px; 
+    border-radius: 10px; 
     text-decoration: none;
 }
 .voltar {
