@@ -1,36 +1,112 @@
+<link rel="stylesheet" href="CSS/conf_loja.css">
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sharkpoints</title>
+    
+<style>
+    /*fundo daorinha*/
+ body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #646363;
+    background-image: url('IMAGENS/fundo_daorinha.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    opacity: 100%;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.5); /* Cinza com opacidade */
+    z-index: 999; /* Certifique-se de que a camada fique por cima de todo o conteúdo */
+}
+
+
+</style>
+
 </head>
 <body>
-    <H3>SHARKPOINTS</H3>
 
-    <H4>SALDO ATUAL</H4>
+    <div class="aviso">
+        <h2>COMPRA CONFIRMADA !!</h2> <br>
+        <p>UMA MENSAGEM NO TELEFONE CADASTRADO SERÁ ENVIADA COM MAIS INFORMAÇÕES</p>
+        <br>
+        <button onclick="voltar()">VOLTAR</button>
+    </div>
 
-    <H3>1 MÊS GRÁTIS</H3>
-    <H3>1 MÊS GRÁTIS</H3>
-    <H3>1 MÊS GRÁTIS</H3>
-    <H3>1 MÊS GRÁTIS</H3>
+    <div class="fosco_esquerda">
+        <img src="IMAGENS/fundo_preto.png" alt="fundo fosco">
+    </div>
 
-    <H6>SP</H6>
-    <H6>SP</H6>
-    <H6>SP</H6>
-    <H6>SP</H6>
+    <div class="fosco_direita">
+        <img src="IMAGENS/fundo_preto.png" alt="fundo fosco">
+    </div>
 
-    <H3>39</H3>
-    <H3>37</H3>
-    <H3>32</H3>
-    <H3>30</H3>
 
-    <H5>OBTER</H5>
-    <H5>OBTER</H5>
-    <H5>OBTER</H5>
-    <H5>OBTER</H5>
 
-    <p>CLIQUE AQUI PARA ENTENDER COMO FUNCIONA E COMO RESGATAR</p>
- 
+<main>
+    <div class="container">
+        <div class="saldo">
+            <p>SALDO ATUAL</p>
+            <h2>196 SP</h2>
+        </div>
+
+        <div class="card">
+            <div class="logo">
+                <img src="IMAGENS/primeokok.png" alt="Prime Video">
+            </div>
+            <div class="info">
+                <p>1 MÊS GRÁTIS</p>
+                <p><strong>SP 39</strong></p>
+            </div>
+            <button>OBTER</button>
+        </div>
+
+        <div class="card">
+            <div class="logo">
+                <img src="IMAGENS/netflixokok.png" alt="Netflix">
+            </div>
+            <div class="info">
+                <p>1 MÊS GRÁTIS</p>
+                <p><strong>SP 47</strong></p>
+            </div>
+            <button>OBTER</button>
+        </div>
+
+        <div class="card">
+            <div class="logo">
+                <img src="IMAGENS/hbookok.png" alt="HBO Max">
+            </div>
+            <div class="info">
+                <p>1 MÊS GRÁTIS</p>
+                <p><strong>SP 32</strong></p>
+            </div>
+            <button>OBTER</button>
+        </div>
+
+        <div class="card">
+            <div class="logo">
+                <img src="IMAGENS/paramountokok.png" alt="Paramount+">
+            </div>
+            <div class="info">
+                <p>1 MÊS GRÁTIS</p>
+                <p><strong>SP 30</strong></p>
+            </div>
+            <button>OBTER</button>
+        </div>
+
+       
+</main>
+
 </body>
 </html>
