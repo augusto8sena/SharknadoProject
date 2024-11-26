@@ -107,31 +107,98 @@
       font-size: 1em;
       margin: 0;
     }
+
+    
+
+.header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.site-title {
+  font-size: 1.5em;
+  margin: 0;
+  color: #fff;
+}
+
+.site-title {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-actions a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.login-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.profile-icon {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  color: #fff;
+}
   </style>
 </head>
 <body>
-  <!-- Cabeçalho -->
-  <header>
-    <div style="display: flex; align-items: center;">
-      <img src="../IMAGENS/sharknadologocinza.png" alt="Logo Sharknado">
-      <h1>SHARKWAVE</h1>
+  
+  <header class="header">
+    <div class="logo-container">
+      <h1 class="site-title">SHARKWAVE</h1>
     </div>
-    <nav>
-      <a href="#">HOME</a>
-      <a href="#">SOBRE</a>
-      <a href="#">RANKING</a>
-      <a href="#">SHARKPOINTS</a>
-      <a href="#">RECLAMAÇÕES</a>
-      <a href="#">DICAS</a>
+    <nav class="nav-menu">
+      <a href="../Views/homesem.html">HOME</a>
+      <a href="../Views/sobresem.html">SOBRE</a>
+      <a href="../Views/Erick_login1.html">RANKING</a>
+      <a href="../Views/Erick_login1.html">SHARKPOINTS</a>
+      <a href="../Views/Erick_login1.html">RECLAMAÇÕES</a>
+      <a href="../Views/dicassem.html">DICAS</a>
     </nav>
-    <div class="actions">
-      <a href="#">CADASTRE-SE</a>
-      <button>ENTRAR</button>
-      <div class="profile-icon">👤</div>
+    <div class="user-actions">
+      <a href="../Views/login.html">ENTRAR</a>
+      <a href="../Views/Erick_login2.html">CADASTRE-SE</a>
     </div>
   </header>
-
-  <!-- Conteúdo principal -->
+  <div style="background-color: #000; color: #fff; text-align: center; padding: 5px 0; font-size: 0.9em;">
+    <span style="margin: 0 15px;">AJUDE A SALVAR O MEIO AMBIENTE</span>
+    <span style="margin: 0 15px;">CUPONS E PROMOÇÕES SEMANAIS</span>
+  
   <main>
     <h2>DICAS E INSTRUÇÕES</h2>
     <div class="tips">
