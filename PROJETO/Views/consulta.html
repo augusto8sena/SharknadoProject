@@ -8,7 +8,142 @@
     /* Importando fonte Rubik */
     @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
 
-    /* Estilização global */
+    .header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px; /* Ajuste a altura da logo */
+  margin-right: 10px;
+  object-fit: contain; /* Garante que a imagem não distorça */
+}
+
+.site-title {
+  font-size: 1.5em;
+  margin: 0;
+  color: #fff;
+}
+
+.site-title {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-actions a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.login-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.profile-icon {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  color: #fff;
+}
+
+    .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282828;
+  padding-left: 130px;
+  color: white;
+  font-family: Arial, sans-serif;
+ 
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  /* Organiza os elementos verticalmente na esquerda */
+}
+
+.logo {
+  width: 170px;
+  /* Define a largura do logotipo da esquerda */
+  margin-bottom: 15px;
+  /* Espaçamento abaixo do logotipo */
+}
+
+.contact-info {
+  line-height: 1.0;
+  
+}
+
+.contact-title {
+  font-weight: bold;
+  margin-bottom: 25px;
+  font-size: 18px;
+
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.footer-right .logo-adicional {
+  width: 300px;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.contact-info p i {
+  margin-right: 5px;
+}
+
     body {
       margin: 0;
       font-family: 'Rubik', sans-serif;
@@ -92,28 +227,24 @@
   </style>
 </head>
 <body>
-  <header style="background-color: #333; color: #fff; font-family: Arial, sans-serif; display: flex; align-items: center; justify-content: space-between; padding: 10px 20px;">
-    <div style="display: flex; align-items: center;">
-      <img src="../IMAGENS/sharknadologocinza.png" alt="Logo Sharknado" style="height: 50px; margin-right: 10px;"> <!-- Substitua 'logo.png' pelo caminho correto da logo -->
-      <h1 style="font-size: 1.5em; margin: 0;">SHARKWAVE</h1>
+  <header class="header">
+    <div class="logo-container">
+      <img src="../IMAGENS/sharknadologocinza750.png" alt="Logo Sharknado" class="logo">
+      <h1 class="site-title">SHARKWAVE</h1>
     </div>
-    <nav style="display: flex; gap: 20px; align-items: center;">
-      <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">HOME</a>
-      <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">SOBRE</a>
-      <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">RANKING</a>
-      <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">SHARKPOINTS</a>
-      <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">RECLAMAÇÕES</a>
-      <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">DICAS</a>
+    <nav class="nav-menu">
+      <a href="#">HOME</a>
+      <a href="#">SOBRE</a>
+      <a href="#">RANKING</a>
+      <a href="#">SHARKPOINTS</a>
+      <a href="#">RECLAMAÇÕES</a>
+      <a href="#">DICAS</a>
     </nav>
-    <div style="display: flex; align-items: center; gap: 10px;">
-      <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">CADASTRE-SE</a>
-      <button style="background-color: #000; color: #fff; border: none; padding: 5px 10px; font-size: 1em; cursor: pointer;">ENTRAR</button>
-      <div style="border: 2px solid #fff; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
-        <span style="font-size: 1.5em; color: #fff;">👤</span> <!-- Substitua por um ícone real, se necessário -->
-      </div>
-      
+    <div class="user-actions">
+      <a href="#">CADASTRE-SE</a>
+      <button class="login-button">ENTRAR</button>
+      <div class="profile-icon">👤</div>
     </div>
-    
   </header>
   <div style="background-color: #000; color: #fff; text-align: center; padding: 5px 0; font-size: 0.9em;">
     <span style="margin: 0 15px;">AJUDE A SALVAR O MEIO AMBIENTE</span>
@@ -214,5 +345,43 @@
       </div>
     </div>
   </div>
+  <footer class="footer">
+
+    <div class="footer-left">
+
+      <img src="../IMAGENS/SAAEOK.png" alt="SAAE Salto" class="logo">
+
+      <div class="contact-info">
+
+        <p class="contact-title">
+          FALE CONOSCO
+        </p>
+
+        <p>
+          <i class="fas fa-home"></i>
+          R. Nove de Julho, 1033 - Centro, Salto - SP, 13320-005
+        </p>
+
+        <p>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:ouvidoria@saaesalto.sp.gov.br">
+            ouvidoria@saaesalto.sp.gov.br
+          </a>
+        </p>
+
+        <p>
+          <i class="fas fa-phone"\></i>
+          0800 7796 300
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-right">
+
+      <img src="../IMAGENS/SENAassinatura.png" alt="assinatura" class="logo-adicional">
+
+    </div>
+  </footer>
 </body>
 </html>
