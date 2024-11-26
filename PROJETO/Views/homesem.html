@@ -109,39 +109,94 @@
             color: #00aaff;
             text-decoration: none;
         }
+        .header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.site-title {
+  font-size: 1.5em;
+  margin: 0;
+  color: #fff;
+}
+
+.site-title {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-actions a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.login-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.profile-icon {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  color: #fff;
+}
     </style>
 </head>
 <body>
-    <header style="background-color: #333; color: #fff; font-family: Arial, sans-serif; display: flex; align-items: center; justify-content: space-between; padding: 10px 20px;">
-        <div style="display: flex; align-items: center;">
-          <img src="../IMAGENS/sharknadologocinza.png" alt="Logo Sharknado" style="height: 50px; margin-right: 10px;"> <!-- Substitua 'logo.png' pelo caminho correto da logo -->
-          <h1 style="font-size: 1.5em; margin: 0;">SHARKWAVE</h1>
+    <header class="header">
+        <div class="logo-container">
+          <h1 class="site-title">SHARKWAVE</h1>
         </div>
-        <nav style="display: flex; gap: 20px; align-items: center;">
-          <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">HOME</a>
-          <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">SOBRE</a>
-          <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">RANKING</a>
-          <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">SHARKPOINTS</a>
-          <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">RECLAMAÇÕES</a>
-          <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">DICAS</a>
+        <nav class="nav-menu">
+          <a href="../Views/homesem.html">HOME</a>
+          <a href="../Views/sobresem.html">SOBRE</a>
+          <a href="../Views/Erick_login1.html">RANKING</a>
+          <a href="../Views/Erick_login1.html">SHARKPOINTS</a>
+          <a href="../Views/Erick_login1.html">RECLAMAÇÕES</a>
+          <a href="../Views/dicassem.html">DICAS</a>
         </nav>
-        <div style="display: flex; align-items: center; gap: 10px;">
-          <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">CADASTRE-SE</a>
-          <button style="background-color: #000; color: #fff; border: none; padding: 5px 10px; font-size: 1em; cursor: pointer;">ENTRAR</button>
-          <div style="border: 2px solid #fff; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
-            <span style="font-size: 1.5em; color: #fff;">👤</span> <!-- Substitua por um ícone real, se necessário -->
-          </div>
-          
+        <div class="user-actions">
+          <a href="#">SAIR</a>
+          <div class="profile-icon">👤</div>
         </div>
-        
       </header>
       <div style="background-color: #000; color: #fff; text-align: center; padding: 5px 0; font-size: 0.9em;">
         <span style="margin: 0 15px;">AJUDE A SALVAR O MEIO AMBIENTE</span>
         <span style="margin: 0 15px;">CUPONS E PROMOÇÕES SEMANAIS</span>
-        <span style="margin: 0 15px;">ITU E REGIÃO</span>
-      </div>
     
-
     <!-- Seção de Economia -->
     <div class="main-section">
         <h1>Como eu vou economizar e ainda ganhar pontos?</h1>
