@@ -11,7 +11,6 @@
             font-family: Arial, sans-serif;
             background-color: #000;
             color: #fff;
-            /* Ajuste para o fundo funcionar corretamente */
             background-image: url('../Views/IMAGENS/background3.jpg');
             background-repeat: no-repeat;
             background-size: cover;
@@ -168,20 +167,24 @@
             padding: 20px 50px;
             color: white;
             font-family: Arial, sans-serif;
+            text-align: left;
         }
 
         .footer-left {
             display: flex;
+            text-align: left;
             flex-direction: column;
+            align-items: flex-start; /* Alinha ao início (à esquerda) */
+        }
+
+        .footer-left .contact-info {
+            line-height: 1.5;
+            text-align: left; /* Texto alinhado à esquerda */
         }
 
         .footer .logo {
             width: 170px;
             margin-bottom: 15px;
-        }
-
-        .footer .contact-info {
-            line-height: 1.5;
         }
 
         .footer .contact-title {
@@ -199,8 +202,17 @@
             text-decoration: underline;
         }
 
+        .footer-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Alinha o conteúdo à direita */
+        }
+
         .footer-right .logo-adicional {
             width: 300px;
+        }
+        .contact-info{
+          text-align: left;
         }
     </style>
 </head>
@@ -273,6 +285,3 @@
     </footer>
 </body>
 </html>
-
-
-

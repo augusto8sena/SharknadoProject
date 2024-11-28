@@ -14,7 +14,7 @@
             color: #fff;
             font-family: "Rubik", sans-serif;
             background: #1c1c1c;
-            background-image: url('../Views/IMAGENS/background2.jpg');
+            background-image: url('../Views/IMAGENS/background3.jpg');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: 100% 100%;
@@ -102,24 +102,41 @@
         /* Seção principal */
         .main-content {
             padding: 50px;
-            text-align: center;
+            text-align: left;  /* Ajustado para texto não centralizado */
         }
 
         .main-content h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+            font-size: 3em; /* Tamanho maior */
+            margin-bottom: 50px; /* Aumentado para dar mais distância */
+            font-family: "Rubik", sans-serif; /* Fonte Rubik */
+            text-align: center; /* Centralizado */
         }
 
-        .main-content p {
-            font-size: 1em;
-            line-height: 1.6;
+        /* Grid layout para a imagem e texto */
+        .content-container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr; /* 1fr para a imagem e 1.5fr para o texto */
+            gap: 30px;
+            align-items: center;
+            justify-items: start;
+            margin-top: 20px;
         }
 
-        .main-content .image-box {
-            width: 300px;
-            height: 400px;
+        .image-box img {
+            width: 100%; /* A imagem agora ocupará a largura total disponível */
+            max-width: 500px; /* Limita a largura máxima da imagem */
+            height: auto; /* Mantém a proporção da imagem */
             border: 2px solid #fff;
-            margin: 20px auto;
+        }
+
+        .text-box {
+            font-size: 1.2em;  /* Tamanho de texto maior */
+            line-height: 1.6;
+            color: #fff;
+        }
+
+        .text-box p {
+            margin-bottom: 20px;
         }
 
         /* Rodapé */
@@ -168,6 +185,13 @@
         .top-bar span {
             margin: 0 15px;
         }
+
+        /* Responsividade */
+        @media screen and (max-width: 768px) {
+            .content-container {
+                grid-template-columns: 1fr; /* Em telas menores, empilhar a imagem e o texto */
+            }
+        }
     </style>
 </head>
 <body>
@@ -189,6 +213,7 @@
             <a href="../Views/login.html"><button class="login-button">ENTRAR</button></a>
         </div>
     </header>
+
     <div class="top-bar">
         <span>AJUDE A SALVAR O MEIO AMBIENTE</span>
         <span>CUPONS E PROMOÇÕES SEMANAIS</span>
@@ -196,13 +221,15 @@
 
     <div class="main-content">
         <h1>NOSSA HISTÓRIA</h1>
-        <div class="image-box"></div>
-        <p>O Serviço Autônomo de Água e Esgoto (SAAE) de Salto é uma entidade municipal responsável por gerir o fornecimento de água, a coleta e o tratamento de esgoto na cidade de Salto. Com um compromisso sólido com a preservação ambiental e a sustentabilidade, o SAAE de Salto investe constantemente em tecnologias e ações educativas para conscientizar a população sobre o uso responsável dos recursos hídricos. O objetivo é garantir a qualidade do abastecimento e a preservação da água, um bem vital e cada vez mais escasso.
-
-            Desenvolvido pela equipe Sharknado, o site SharkWave é uma iniciativa inovadora que busca apoiar as pessoas no desafio diário de economizar água. Com informações, dicas práticas e recursos interativos, o site ajuda os usuários a entenderem como pequenas mudanças podem fazer uma grande diferença na preservação desse recurso essencial. O SharkWave oferece calculadoras de consumo, sugestões para reduzir o desperdício, além de atualizações sobre ações e políticas ambientais promovidas pelo SAAE de Salto. A missão do SharkWave é tornar a conscientização e a economia de água mais acessíveis, práticas e engajantes para todos os cidadãos de Salto e além.</p>
+        <div class="content-container">
+            <div class="image-box"><img src="../Views/IMAGENS/reservatorio_saae.jpg" alt="Reservatório SAAE"></div>
+            <div class="text-box">
+                <p>O Serviço Autônomo de Água e Esgoto (SAAE) de Salto é uma entidade municipal responsável por gerir o fornecimento de água, a coleta e o tratamento de esgoto na cidade de Salto. Com um compromisso sólido com a preservação ambiental e a sustentabilidade, o SAAE de Salto investe constantemente em tecnologias e ações educativas para conscientizar a população sobre o uso responsável dos recursos hídricos. O objetivo é garantir a qualidade do abastecimento e a preservação da água, um bem vital e cada vez mais escasso.</p>
+                <p>Desenvolvido pela equipe Sharknado, o site SharkWave é uma iniciativa inovadora que busca apoiar as pessoas no desafio diário de economizar água. Com informações, dicas práticas e recursos interativos, o site ajuda os usuários a entenderem como pequenas mudanças podem fazer uma grande diferença na preservação desse recurso essencial. O SharkWave oferece calculadoras de consumo, sugestões para reduzir o desperdício, além de atualizações sobre ações e políticas ambientais promovidas pelo SAAE de Salto. A missão do SharkWave é tornar a conscientização e a economia de água mais acessíveis, práticas e engajantes para todos os cidadãos de Salto e além.</p>
+            </div>
+        </div>
     </div>
 
-    <!-- Rodapé -->
     <footer class="footer">
         <div class="footer-left">
             <img src="../Views/IMAGENS/SAAEOK.png" alt="SAAE Salto" class="logo">
