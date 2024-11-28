@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sharkwave</title>
+    <title>Sharkwave - Sobre</title>
     <style>
         /* Estilo Geral */
         body {
@@ -12,6 +12,12 @@
             font-family: Arial, sans-serif;
             background-color: #000;
             color: #fff;
+            font-family: "Rubik", sans-serif;
+            background: #1c1c1c;
+            background-image: url('../Views/IMAGENS/background3.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
         }
 
         a {
@@ -56,6 +62,31 @@
             gap: 10px;
         }
 
+        .user-actions a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .login-button {
+            background-color: #191919;
+            border: none;
+            color: #fff;
+            padding: 5px 15px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .login-button:hover {
+            background-color: #272727;
+            border: none;
+            color: #fff;
+            padding: 5px 15px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
         .profile-icon {
             border: 2px solid #fff;
             border-radius: 50%;
@@ -71,24 +102,41 @@
         /* Seção principal */
         .main-content {
             padding: 50px;
-            text-align: center;
+            text-align: left;  /* Ajustado para texto não centralizado */
         }
 
         .main-content h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+            font-size: 3em; /* Tamanho maior */
+            margin-bottom: 50px; /* Aumentado para dar mais distância */
+            font-family: "Rubik", sans-serif; /* Fonte Rubik */
+            text-align: center; /* Centralizado */
         }
 
-        .main-content p {
-            font-size: 1em;
-            line-height: 1.6;
+        /* Grid layout para a imagem e texto */
+        .content-container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr; /* 1fr para a imagem e 1.5fr para o texto */
+            gap: 30px;
+            align-items: center;
+            justify-items: start;
+            margin-top: 20px;
         }
 
-        .main-content .image-box {
-            width: 300px;
-            height: 400px;
+        .image-box img {
+            width: 100%; /* A imagem agora ocupará a largura total disponível */
+            max-width: 500px; /* Limita a largura máxima da imagem */
+            height: auto; /* Mantém a proporção da imagem */
             border: 2px solid #fff;
-            margin: 20px auto;
+        }
+
+        .text-box {
+            font-size: 1.2em;  /* Tamanho de texto maior */
+            line-height: 1.6;
+            color: #fff;
+        }
+
+        .text-box p {
+            margin-bottom: 20px;
         }
 
         /* Rodapé */
@@ -124,107 +172,64 @@
         .footer-right .logo-adicional {
             width: 300px;
         }
-        
-.header {
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-}
 
-.site-title {
-  font-size: 1.5em;
-  margin: 0;
-  color: #fff;
-}
+        /* Barra superior */
+        .top-bar {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            font-size: 0.9em;
+        }
 
-.site-title {
-  font-size: 1.5em;
-  margin: 0;
-}
+        .top-bar span {
+            margin: 0 15px;
+        }
 
-.nav-menu {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.nav-menu a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1em;
-}
-
-.user-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.user-actions a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1em;
-}
-
-.login-button {
-  background-color: #000;
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  font-size: 1em;
-  cursor: pointer;
-}
-
-.profile-icon {
-  border: 2px solid #fff;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5em;
-  color: #fff;
-}
-
+        /* Responsividade */
+        @media screen and (max-width: 768px) {
+            .content-container {
+                grid-template-columns: 1fr; /* Em telas menores, empilhar a imagem e o texto */
+            }
+        }
     </style>
 </head>
 <body>
+
     <header class="header">
         <div class="logo-container">
-          <h1 class="site-title">SHARKWAVE</h1>
+            <h1 class="site-title">SHARKWAVE</h1>
         </div>
         <nav class="nav-menu">
-          <a href="../Views/homesem.html">HOME</a>
-          <a href="../Views/sobresem.html">SOBRE</a>
-          <a href="../Views/semcadastro.html">RANKING</a>
-          <a href="../Views/semcadastro.html">SHARKPOINTS</a>
-          <a href="../Views/semcadastro.html">RECLAMAÇÕES</a>
-          <a href="../Views/dicassem.html">DICAS</a>
+            <a href="../Views/homesem.html">HOME</a>
+            <a href="../Views/sobresem.html">SOBRE</a>
+            <a href="../Views/semcadastro.html">RANKING</a>
+            <a href="../Views/semcadastro.html">SHARKPOINTS</a>
+            <a href="../Views/semcadastro.html">RECLAMAÇÕES</a>
+            <a href="../Views/dicassem.html">DICAS</a>
         </nav>
         <div class="user-actions">
-          <a href="../Views/Erick_login2.html">CADASTRE-SE</a>
-          <a href="../Views/login.html"><button class="login-button">ENTRAR</button></a>
+            <a href="../Views/Cadastro.html">CADASTRE-SE</a>
+            <a href="../Views/login.html"><button class="login-button">ENTRAR</button></a>
         </div>
-      </header>
-      <div style="background-color: #000; color: #fff; text-align: center; padding: 5px 0; font-size: 0.9em;">
-        <span style="margin: 0 15px;">AJUDE A SALVAR O MEIO AMBIENTE</span>
-        <span style="margin: 0 15px;">CUPONS E PROMOÇÕES SEMANAIS</span>
-        <span style="margin: 0 15px;">ITU E REGIÃO</span>
-      </div>
+    </header>
+
+    <div class="top-bar">
+        <span>AJUDE A SALVAR O MEIO AMBIENTE</span>
+        <span>CUPONS E PROMOÇÕES SEMANAIS</span>
+    </div>
 
     <div class="main-content">
         <h1>NOSSA HISTÓRIA</h1>
-        <div class="image-box"></div>
-        <p>O buraco sem saída surgiu do temor humano de ficar sem água...</p>
-        <p>A rotação de objetos foi consistentemente ligada ao uso com água...</p>
-        <p>...</p>
+        <div class="content-container">
+            <div class="image-box"><img src="../Views/IMAGENS/reservatorio_saae.jpg" alt="Reservatório SAAE"></div>
+            <div class="text-box">
+                <p>O Serviço Autônomo de Água e Esgoto (SAAE) de Salto é uma entidade municipal responsável por gerir o fornecimento de água, a coleta e o tratamento de esgoto na cidade de Salto. Com um compromisso sólido com a preservação ambiental e a sustentabilidade, o SAAE de Salto investe constantemente em tecnologias e ações educativas para conscientizar a população sobre o uso responsável dos recursos hídricos. O objetivo é garantir a qualidade do abastecimento e a preservação da água, um bem vital e cada vez mais escasso.</p>
+                <p>Desenvolvido pela equipe Sharknado, o site SharkWave é uma iniciativa inovadora que busca apoiar as pessoas no desafio diário de economizar água. Com informações, dicas práticas e recursos interativos, o site ajuda os usuários a entenderem como pequenas mudanças podem fazer uma grande diferença na preservação desse recurso essencial. O SharkWave oferece calculadoras de consumo, sugestões para reduzir o desperdício, além de atualizações sobre ações e políticas ambientais promovidas pelo SAAE de Salto. A missão do SharkWave é tornar a conscientização e a economia de água mais acessíveis, práticas e engajantes para todos os cidadãos de Salto e além.</p>
+            </div>
+        </div>
     </div>
 
-    <!-- Rodapé -->
     <footer class="footer">
         <div class="footer-left">
             <img src="../Views/IMAGENS/SAAEOK.png" alt="SAAE Salto" class="logo">
@@ -242,4 +247,3 @@
 
 </body>
 </html>
-
