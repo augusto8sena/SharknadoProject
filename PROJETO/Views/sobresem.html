@@ -124,35 +124,98 @@
         .footer-right .logo-adicional {
             width: 300px;
         }
+        
+.header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.site-title {
+  font-size: 1.5em;
+  margin: 0;
+  color: #fff;
+}
+
+.site-title {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-actions a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.login-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.profile-icon {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  color: #fff;
+}
+
     </style>
 </head>
 <body>
-
-    <!-- Cabeçalho -->
     <header class="header">
         <div class="logo-container">
-            <h1 class="site-title">SHARKWAVE</h1>
+          <h1 class="site-title">SHARKWAVE</h1>
         </div>
         <nav class="nav-menu">
-            <a href="#">HOME</a>
-            <a href="#">SOBRE</a>
-            <a href="#">RANKING</a>
-            <a href="#">SHARKPOINTS</a>
-            <a href="#">RECLAMAÇÕES</a>
-            <a href="#">DICAS</a>
+          <a href="../Views/homesem.html">HOME</a>
+          <a href="../Views/sobresem.html">SOBRE</a>
+          <a href="../Views/semcadastro.html">RANKING</a>
+          <a href="../Views/semcadastro.html">SHARKPOINTS</a>
+          <a href="../Views/semcadastro.html">RECLAMAÇÕES</a>
+          <a href="../Views/dicassem.html">DICAS</a>
         </nav>
         <div class="user-actions">
-            <a href="#">SAIR</a>
-            <div class="profile-icon">👤</div>
+          <a href="../Views/Erick_login2.html">CADASTRE-SE</a>
+          <a href="../Views/login.html"><button class="login-button">ENTRAR</button></a>
         </div>
-    </header>
-
-    <div style="background-color: #000; color: #fff; text-align: center; padding: 5px 0; font-size: 0.9em;">
+      </header>
+      <div style="background-color: #000; color: #fff; text-align: center; padding: 5px 0; font-size: 0.9em;">
         <span style="margin: 0 15px;">AJUDE A SALVAR O MEIO AMBIENTE</span>
         <span style="margin: 0 15px;">CUPONS E PROMOÇÕES SEMANAIS</span>
-    </div>
+        <span style="margin: 0 15px;">ITU E REGIÃO</span>
+      </div>
 
-    <!-- Conteúdo Principal -->
     <div class="main-content">
         <h1>NOSSA HISTÓRIA</h1>
         <div class="image-box"></div>
