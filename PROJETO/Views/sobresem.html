@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sharkwave</title>
+    <title>Sharkwave - Sobre</title>
     <style>
         /* Estilo Geral */
         body {
@@ -12,6 +12,12 @@
             font-family: Arial, sans-serif;
             background-color: #000;
             color: #fff;
+            font-family: "Rubik", sans-serif;
+            background: #1c1c1c;
+            background-image: url('../Views/IMAGENS/background2.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
         }
 
         a {
@@ -54,6 +60,31 @@
             display: flex;
             align-items: center;
             gap: 10px;
+        }
+
+        .user-actions a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .login-button {
+            background-color: #191919;
+            border: none;
+            color: #fff;
+            padding: 5px 15px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .login-button:hover {
+            background-color: #272727;
+            border: none;
+            color: #fff;
+            padding: 5px 15px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
         }
 
         .profile-icon {
@@ -124,104 +155,51 @@
         .footer-right .logo-adicional {
             width: 300px;
         }
-        
-.header {
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-}
 
-.site-title {
-  font-size: 1.5em;
-  margin: 0;
-  color: #fff;
-}
+        /* Barra superior */
+        .top-bar {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            font-size: 0.9em;
+        }
 
-.site-title {
-  font-size: 1.5em;
-  margin: 0;
-}
-
-.nav-menu {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.nav-menu a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1em;
-}
-
-.user-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.user-actions a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1em;
-}
-
-.login-button {
-  background-color: #000;
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  font-size: 1em;
-  cursor: pointer;
-}
-
-.profile-icon {
-  border: 2px solid #fff;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5em;
-  color: #fff;
-}
-
+        .top-bar span {
+            margin: 0 15px;
+        }
     </style>
 </head>
 <body>
+
     <header class="header">
         <div class="logo-container">
-          <h1 class="site-title">SHARKWAVE</h1>
+            <h1 class="site-title">SHARKWAVE</h1>
         </div>
         <nav class="nav-menu">
-          <a href="../Views/homesem.html">HOME</a>
-          <a href="../Views/sobresem.html">SOBRE</a>
-          <a href="../Views/semcadastro.html">RANKING</a>
-          <a href="../Views/semcadastro.html">SHARKPOINTS</a>
-          <a href="../Views/semcadastro.html">RECLAMAÇÕES</a>
-          <a href="../Views/dicassem.html">DICAS</a>
+            <a href="../Views/homesem.html">HOME</a>
+            <a href="../Views/sobresem.html">SOBRE</a>
+            <a href="../Views/semcadastro.html">RANKING</a>
+            <a href="../Views/semcadastro.html">SHARKPOINTS</a>
+            <a href="../Views/semcadastro.html">RECLAMAÇÕES</a>
+            <a href="../Views/dicassem.html">DICAS</a>
         </nav>
         <div class="user-actions">
-          <a href="../Views/Erick_login2.html">CADASTRE-SE</a>
-          <a href="../Views/login.html"><button class="login-button">ENTRAR</button></a>
+            <a href="../Views/Cadastro.html">CADASTRE-SE</a>
+            <a href="../Views/login.html"><button class="login-button">ENTRAR</button></a>
         </div>
-      </header>
-      <div style="background-color: #000; color: #fff; text-align: center; padding: 5px 0; font-size: 0.9em;">
-        <span style="margin: 0 15px;">AJUDE A SALVAR O MEIO AMBIENTE</span>
-        <span style="margin: 0 15px;">CUPONS E PROMOÇÕES SEMANAIS</span>
-        <span style="margin: 0 15px;">ITU E REGIÃO</span>
-      </div>
+    </header>
+    <div class="top-bar">
+        <span>AJUDE A SALVAR O MEIO AMBIENTE</span>
+        <span>CUPONS E PROMOÇÕES SEMANAIS</span>
+    </div>
 
     <div class="main-content">
         <h1>NOSSA HISTÓRIA</h1>
         <div class="image-box"></div>
-        <p>O buraco sem saída surgiu do temor humano de ficar sem água...</p>
-        <p>A rotação de objetos foi consistentemente ligada ao uso com água...</p>
-        <p>...</p>
+        <p>O Serviço Autônomo de Água e Esgoto (SAAE) de Salto é uma entidade municipal responsável por gerir o fornecimento de água, a coleta e o tratamento de esgoto na cidade de Salto. Com um compromisso sólido com a preservação ambiental e a sustentabilidade, o SAAE de Salto investe constantemente em tecnologias e ações educativas para conscientizar a população sobre o uso responsável dos recursos hídricos. O objetivo é garantir a qualidade do abastecimento e a preservação da água, um bem vital e cada vez mais escasso.
+
+            Desenvolvido pela equipe Sharknado, o site SharkWave é uma iniciativa inovadora que busca apoiar as pessoas no desafio diário de economizar água. Com informações, dicas práticas e recursos interativos, o site ajuda os usuários a entenderem como pequenas mudanças podem fazer uma grande diferença na preservação desse recurso essencial. O SharkWave oferece calculadoras de consumo, sugestões para reduzir o desperdício, além de atualizações sobre ações e políticas ambientais promovidas pelo SAAE de Salto. A missão do SharkWave é tornar a conscientização e a economia de água mais acessíveis, práticas e engajantes para todos os cidadãos de Salto e além.</p>
     </div>
 
     <!-- Rodapé -->
@@ -242,4 +220,3 @@
 
 </body>
 </html>
-
