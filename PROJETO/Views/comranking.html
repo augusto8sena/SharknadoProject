@@ -4,240 +4,287 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leaderboard</title>
-    <style>
-        /* Centralização e fundo */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-            background-image: url('../Views/IMAGENS/background3.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            text-align: center; /* Garantir que o texto principal seja centralizado */
-        }
+    <style>.container {
+    width: 90%; /* Usar 90% da tela */
+    max-width: 1200px; /* Máximo de 1200px de largura */
+    margin: 0 auto; /* Centralizar o container */
+    text-align: center; /* Centralizar o conteúdo */
+    padding: 20px;
+}
 
-        .container {
-            width: 90%; /* Usar 90% da tela */
-            max-width: 1200px; /* Máximo de 1200px de largura */
-            margin: 0 auto; /* Centralizar o container */
-            text-align: center; /* Centralizar o conteúdo */
-            padding: 20px;
-        }
+/* Título principal */
+.leaderboard-title {
+    font-size: 3.5em; /* Tamanho grande */
+    margin-bottom: 10px; /* Espaço inferior */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+    text-align: center; /* Garantir que o título seja centralizado */
+}
 
-        .leaderboard-title {
-            font-size: 3.5em; /* Tamanho grande */
-            margin-bottom: 10px; /* Espaço inferior */
-            letter-spacing: 2px; /* Espaçamento entre letras */
-        }
+/* Subtítulo */
+.subtitle {
+    font-size: 1.5em; /* Tamanho intermediário */
+    margin-bottom: 30px; /* Espaçamento maior */
+    font-weight: 300; /* Mais leve */
+    color: #CCC; /* Cor cinza claro */
+    text-align: center; /* Centralizar o subtítulo */
+}
 
-        .subtitle {
-            font-size: 1.5em; /* Tamanho intermediário */
-            margin-bottom: 30px; /* Espaçamento maior */
-            font-weight: 300; /* Mais leve */
-            color: #CCC; /* Cor cinza claro */
-        }
+/* Estilização da seção do pódio */
+.podium {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 50px; /* Aumenta o espaçamento entre os itens do pódio */
+    margin-bottom: 40px;
+}
 
-        .podium {
-            display: flex; /* Usar flexbox */
-            justify-content: center; /* Centralizar os itens do pódio */
-            align-items: flex-end; /* Alinhamento inferior */
-            margin-bottom: 40px; /* Espaço inferior */
-        }
+/* Itens do pódio */
+.podium-item {
+    position: relative; /* Para ajuste de posicionamento */
+    text-align: center; /* Centralizar texto */
+    margin: 0 15px; /* Margem entre itens */
+}
 
-        .podium-item {
-            position: relative; /* Para ajuste de posicionamento */
-            text-align: center; /* Centralizar texto */
-            margin: 0 15px; /* Margem entre itens */
-        }
+/* Tamanhos diferentes para os vencedores */
+.first {
+    order: 0; /* Ficar no centro */
+    font-size: 1.8em; /* Tamanho maior */
+}
 
-        .first {
-            order: 0; /* Ficar no centro */
-            font-size: 1.8em; /* Tamanho maior */
-        }
+.second {
+    order: -1; /* Ficar à esquerda */
+    font-size: 1.4em; /* Tamanho médio */
+}
 
-        .second {
-            order: -1; /* Ficar à esquerda */
-            font-size: 1.4em; /* Tamanho médio */
-        }
+.third {
+    order: 1; /* Ficar à direita */
+    font-size: 1.2em; /* Tamanho menor */
+}
 
-        .third {
-            order: 1; /* Ficar à direita */
-            font-size: 1.2em; /* Tamanho menor */
-        }
+/* Imagem do avatar */
+.avatar-container {
+    width: 120px; /* Largura */
+    height: 120px; /* Altura */
+    margin-bottom: 15px; /* Espaçamento inferior */
+}
 
-        .avatar-container {
-            width: 120px;
-            height: 120px;
-            margin-bottom: 15px;
-        }
+.avatar {
+    border-radius: 50%; /* Formato circular */
+    object-fit: cover; /* Para ajustar a imagem dentro */
+}
 
-        .avatar {
-            border-radius: 50%;
-            object-fit: cover;
-        }
+/* Estilo para as posições (números) */
+.podium-item h2 {
+    margin: 10px 0;
+    font-size: 2.5em; /* Tamanho grande */
+    font-weight: bold; /* Negrito */
+}
 
-        .podium-item h2 {
-            margin: 10px 0;
-            font-size: 2.5em;
-            font-weight: bold;
-        }
+/* Pontuação */
+.podium-item .points {
+    font-size: 1.8em; /* Destaque nas pontuações */
+    font-weight: bold;
+}
 
-        .podium-item .points {
-            font-size: 1.8em;
-            font-weight: bold;
-        }
+/* Nome do jogador */
+.podium-item p {
+    font-size: 1.2em;
+    margin-top: 5px;
+}
 
-        .podium-item p {
-            font-size: 1.2em;
-            margin-top: 5px;
-        }
+/* Lista de ranking */
+.ranking {
+    max-width: 600px; /* Limitando a largura */
+    margin: 0 auto;
+    text-align: left; /* Alinhado à esquerda */
+    padding: 20px; /* Espaçamento interno */
+}
 
-        .ranking {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: left;
-            padding: 20px;
-        }
+/* Itens individuais do ranking */
+.ranking-item {
+    display: flex; /* Flexbox para alinhar os itens */
+    justify-content: space-between; /* Espaçar nome e pontos */
+    padding: 10px 0; /* Espaçamento superior/inferior */
+    border-bottom: 1px solid #333; /* Linha divisória */
+    font-size: 1.2em; /* Tamanho padrão */
+}
 
-        .ranking-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px solid #333;
-            font-size: 1.2em;
-        }
+/* Texto de destaque ao final */
+.highlight {
+    font-size: 1.4em;
+    font-weight: bold; /* Negrito */
+    margin-top: 30px; /* Espaçamento superior */
+    color: #FFCC00; /* Cor destacada */
+    text-align: center; /* Centralizar texto */
+}
 
-        .highlight {
-            font-size: 1.4em;
-            font-weight: bold;
-            margin-top: 30px;
-            color: #FFCC00;
-            text-align: center;
-        }
+/* Centralizar o gif da moeda */
+.moe {
+    display: block;
+    margin: 30px auto; /* Centraliza a moeda e adiciona margem superior e inferior */
+    max-width: 100px; /* Limita o tamanho da moeda se necessário */
+}
 
-        .moe {
-            display: block;
-            margin: 0 auto;
-        }
+/* Centralizar a logo do site */
+.logoshark a {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+}
 
-        .logoshark a {
-            display: block;
-            text-align: center;
-            margin: 20px auto;
-        }
+img.avatar {
+    border: 3px solid white; /* Borda branca */
+    border-radius: 50%; /* Deixa a borda arredondada (caso as imagens sejam circulares) */
+}
 
-        .header {
-            background-color: #333;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 20px;
-        }
+.header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
 
-        .site-title {
-            font-size: 1.5em;
-            margin: 0;
-            color: #fff;
-        }
+.site-title {
+    font-size: 1.5em;
+    margin: 0;
+    color: #fff;
+    text-align: center; /* Garantir que o título do site seja centralizado */
+}
 
-        .nav-menu {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
 
-        .nav-menu a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1em;
-        }
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
 
-        .user-actions {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-        .footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            background-color: #282828;
-            padding: 20px 50px;
-            color: white;
-        }
+.user-actions a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
 
-        .footer-left {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #282828;
+    padding: 20px 50px;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: left;
+}
 
-        .footer-left .contact-info {
-            line-height: 1.5;
-        }
+.footer-left {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha ao início (à esquerda) */
+}
 
-        .footer .logo {
-            width: 170px;
-            margin-bottom: 15px;
-        }
+.footer-left .contact-info {
+    line-height: 1.5;
+    text-align: left; /* Texto alinhado à esquerda */
+}
 
-        .footer a {
-            color: white;
-            text-decoration: none;
-        }
+.footer .logo {
+    width: 170px;
+    margin-bottom: 15px;
+}
 
-        .footer a:hover {
-            text-decoration: underline;
-        }
+.footer .contact-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
 
-        .footer-right {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-        }
+.footer a {
+    color: white;
+    text-decoration: none;
+}
 
-        .footer-right .logo-adicional {
-            width: 300px;
-        }
+.footer a:hover {
+    text-decoration: underline;
+}
 
-        .profile-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 2px solid #fff;
-        }
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinha o conteúdo à direita */
+}
 
-        .profile-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+.footer-right .logo-adicional {
+    width: 300px;
+}
 
-        .login-button {
-            background-color: #191919;
-            border: none;
-            color: #fff;
-            padding: 5px 15px;
-            font-size: 1em;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+.contact-info {
+    text-align: left;
+}
 
-        .login-button:hover {
-            background-color: #272727;
-        }
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #fff;
+}
 
-        img.avatar {
-            border: 3px solid white;
-            border-radius: 50%;
-        }
-    </style>
+.profile-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.login-button {
+    background-color: #191919;
+    border: none;
+    color: #fff;
+    padding: 5px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.login-button:hover {
+    background-color: #272727;
+    border: none;
+    color: #fff;
+    padding: 5px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    background-image: url('../Views/IMAGENS/background3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Adicionar borda branca em todas as imagens de ícones */
+img.avatar {
+    border: 3px solid white; /* Borda branca */
+    border-radius: 50%; /* Deixa a borda arredondada (caso as imagens sejam circulares) */
+}</style> 
 </head>
 <body>
     <header class="header">
@@ -258,86 +305,108 @@
         </div>
     </header>
     <div style="background-color: #000; color: #fff; text-align: center; padding: 5px 0; font-size: 0.9em;">
-        <span style="margin: 0 15px;">AJUDE A SALVAR O MEIO AMBIENTE</span>
-        <span style="margin: 0 15px;">CUPONS E PROMOÇÕES SEMANAIS</span>
+      <span style="margin: 0 15px;">AJUDE A SALVAR O MEIO AMBIENTE</span>
+      <span style="margin: 0 15px;">CUPONS E PROMOÇÕES SEMANAIS</span>
     </div>
     
-    <img src="../Views/IMAGENS/gifsharkpointSP.gif" alt="Moeda bonita" class="moe">
-    
-    <h1 class="leaderboard-title">LEADERBOARD</h1> <br>
-    
-    <p class="subtitle">SHARKPOINTS COLETADOS - ITU E REGIÃO</p> <br> <br>
-    
-    <div class="podium">
-        <!-- Segundo colocado -->
-        <div class="podium-item second">
-            <div class="avatar-container">
-                <img src="../Views/IMAGENS/italo_zacariasok.png" alt="Miguel" class="avatar">
-            </div>
-            <h2>2</h2>
-            <span class="points">295SP</span>
-            <p>Miguel</p>
-        </div>
-        
-        <!-- Primeiro colocado -->
-        <div class="podium-item first">
-            <div class="avatar-container">
-                <img src="../Views/IMAGENS/italo_itlalonum1.png" alt="Ítalo" class="avatar">
-            </div>
-            <h2>1</h2>
-            <span class="points">325SP</span>
-            <p>Ítalo</p>
-        </div>
-        
-        <!-- Terceiro colocado -->
-        <div class="podium-item third">
-            <div class="avatar-container">
-                <img src="../Views/IMAGENS/italo_mauriciook.png" alt="Maurício" class="avatar">
-            </div>
-            <h2>3</h2>
-            <span class="points">190SP</span>
-            <p>Maurício</p>
-        </div>
-    </div>
-    
-    <div class="ranking">
-        <div class="ranking-item">
-            <span>4º</span>
-            <span>180SP</span>
-        </div>
-        <div class="ranking-item">
-            <span>5º</span>
-            <span>160SP</span>
-        </div>
-        <div class="ranking-item">
-            <span>6º</span>
-            <span>140SP</span>
-        </div>
-        <div class="ranking-item">
-            <span>7º</span>
-            <span>120SP</span>
-        </div>
-        <div class="ranking-item">
-            <span>8º</span>
-            <span>100SP</span>
-        </div>
-    </div>
+ 
+       <img src="../Views/IMAGENS/gifsharkpointSP.gif" alt="Moeda bonita" class="moe">
+      
+        <!-- Título principal -->
+        <h1 class="leaderboard-title">LEADERBOARD</h1> <br>
+       
+       <!-- Subtítulo -->
+        <p class="subtitle">SHARKPOINTS COLETADOS - ITU E REGIÃO</p> <br> <br>
 
-    <div class="highlight">
-        <h2>PRIMEIROS COLOCADOS - ITU E REGIÃO</h2>
-    </div>
-    
-    <footer class="footer">
-        <div class="footer-left">
-            <div class="contact-info">
-                <p>Endereço: Rua X, nº 123 - Centro</p>
-                <p>Telefone: (11) 1234-5678</p>
-                <p>Email: contato@sharkwave.com</p>
+        <!-- Seção do pódio com os 3 primeiros -->
+        <div class="podium">
+            <!-- Segundo colocado -->
+            <div class="podium-item second">
+                <div class="avatar-container">
+                    <img src="../Views/IMAGENS/italo_zacariasok.png" alt="Miguel" class="avatar"> <!-- Imagem do avatar -->
+                </div>
+                <h2>2</h2> <!-- Posição -->
+                <span class="points">295SP</span> <!-- Pontuação -->
+                <p>Miguel</p> <!-- Nome -->
+            </div>
+            
+            <!-- Primeiro colocado (o mais alto no pódio) -->
+            <div class="podium-item first">
+                <div class="avatar-container">
+                    <img src="../Views/IMAGENS/italo_itlalonum1.png" alt="Ítalo" class="avatar"> <!-- Imagem do avatar -->
+                </div>
+                <h2>1</h2> <!-- Posição -->
+                <span class="points">325SP</span> <!-- Pontuação -->
+                <p>Ítalo</p> <!-- Nome -->
+            </div>
+            
+            <!-- Terceiro colocado -->
+            <div class="podium-item third">
+                <div class="avatar-container">
+                    <img src="../Views/IMAGENS/italo_diego_certinhookok.png" alt="Diego" class="avatar"> <!-- Imagem do avatar -->
+                </div>
+                <h2>3</h2> <!-- Posição -->
+                <span class="points">287SP</span> <!-- Pontuação -->
+                <p>Diego</p> <!-- Nome -->
             </div>
         </div>
-        <div class="footer-right">
-            <img class="logo-adicional" src="../Views/IMAGENS/footerlogo.png" alt="Logo adicional">
+
+        <!-- Lista dos outros colocados -->
+        <div class="ranking">
+            <div class="ranking-item">
+                <img src="../Views/IMAGENS/italo_itlalook.png" alt="Ítalo" class="avatar"> <!-- Imagem do avatar -->
+                <span>Ítalo</span>
+                <span>287SP</span>
+            </div>
+            <div class="ranking-item">
+                <img src="../Views/IMAGENS/italo_zacook.png" alt="Miguel" class="avatar"> <!-- Imagem do avatar -->
+                <span>Miguel</span>
+                <span>295SP</span>
+            </div>
+            <div class="ranking-item">
+                <img src="../Views/IMAGENS/italo_diegook.png" alt="Diego" class="avatar"> <!-- Imagem do avatar -->
+                <span>Diego</span>
+                <span>287SP</span>
+            </div>
+            <div class="ranking-item">
+                <img src="../Views/IMAGENS/italo_augustook.png" alt="Augusto" class="avatar"> <!-- Imagem do avatar -->
+                <span>Augusto</span>
+                <span>267SP</span>
+            </div>
+            <div class="ranking-item">
+                <img src="../Views/IMAGENS/Italo_livia.png" alt="Lívia" class="avatar"> <!-- Imagem do avatar -->
+                <span>Lívia</span>
+                <span>260SP</span>
+            </div>
+            <div class="ranking-item">
+                <img src="../Views/IMAGENS/italo_isaok.png" alt="Isadora" class="avatar"> <!-- Imagem do avatar -->
+                <span>Isadora</span>
+                <span>254SP</span>
+            </div>
         </div>
-    </footer>
+
+        <!-- Texto de destaque -->
+        <p class="highlight">PARABÉNS! VOCÊ ESTÁ NA 4ª COLOCAÇÃO</p>
+    </div>
+    
+      <div class="logoshark">
+        <a> <br>Desenvolvido por <strong>SHARKNADO</strong></a>
+    </div>
+  
+      <footer class="footer">
+          <div class="footer-left">
+              <img src="../Views/IMAGENS/SAAEOK.png" alt="SAAE Salto" class="logo">
+              <div class="contact-info">
+                  <p class="contact-title">FALE CONOSCO</p>
+                  <p>R. Nove de Julho, 1033 - Centro, Salto - SP, 13320-005</p>
+                  <p><a href="mailto:ouvidoria@saaesalto.sp.gov.br">ouvidoria@saaesalto.sp.gov.br</a></p>
+                  <p>0800 7796 300</p>
+              </div>
+          </div>
+          <div class="footer-right">
+              <img src="../Views/IMAGENS/SENAassinatura.png" alt="assinatura" class="logo-adicional">
+          </div>
+      </footer>
 </body>
 </html>
+
