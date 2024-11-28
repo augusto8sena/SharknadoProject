@@ -1,86 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Dicasem</title>
+
   <style>
+    /* Importando a fonte Rubik */
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+    /* Estilos globais */
     body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-            background-image: url('../Views/IMAGENS/background3.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
+      margin: 0;
+      padding: 0;
+      font-family: "Rubik", sans-serif;
+      background-color: #1c1c1c;
+      background-image: url('../Views/IMAGENS/background4.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+      color: #fff;
+    }
 
-        .header {
-            background-color: #333;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 20px;
-        }
+    a {
+      color: white;
+      text-decoration: none;
+    }
 
-        .site-title {
-            font-size: 1.5em;
-            margin: 0;
-            color: #fff;
-        }
+    a:hover {
+      text-decoration: underline;
+    }
 
-        .nav-menu {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
+    /* Cabeçalho */
+    .header {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-        .nav-menu a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1em;
-        }
+    .site-title {
+      font-size: 1.5em;
+      margin: 0;
+    }
 
-        .user-actions {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+    .nav-menu {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
 
-        .user-actions a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1em;
-        }
+    .nav-menu a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1em;
+    }
 
-        .login-button {
-            background-color: #191919;
-            border: none;
-            color: #fff;
-            padding: 5px 15px;
-            font-size: 1em;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .login-button:hover {
-            background-color: #272727;
-            border: none;
-            color: #fff;
-            padding: 5px 15px;
-            font-size: 1em;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        main {
+    .user-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .user-actions a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1em;
+    }
+
+    .login-button {
+      background-color: #191919;
+      border: none;
+      color: #fff;
+      padding: 5px 15px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .login-button:hover {
+      background-color: #272727;
+      border: none;
+      color: #fff;
+    }
+
+    /* Barra superior */
+    .top-bar {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 5px 0;
+      font-size: 0.9em;
+    }
+
+    .top-bar span {
+      margin: 0 15px;
+    }
+
+    /* Estilos para o conteúdo principal */
+    main {
       text-align: center;
       padding: 20px;
     }
 
     h2 {
-      font-size: 2em;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 3em;
       margin-bottom: 20px;
     }
 
@@ -89,6 +118,7 @@
       flex-direction: column;
       gap: 20px;
       align-items: center;
+      margin-bottom: 50px; /* Distância maior entre as dicas e o rodapé */
     }
 
     .tip {
@@ -110,79 +140,52 @@
       font-size: 1em;
       margin: 0;
     }
-    .top-bar {
-    background-color: #000;
-    color: #fff;
+
+    /* Rodapé */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #282828;
+      padding: 30px 50px;
+      color: white;
+    }
+
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-left .logo {
+      width: 170px;
+      margin-bottom: 15px;
+    }
+
+    .contact-info {
+      line-height: 1.5;
+    }
+
+    .contact-title {
+      font-weight: bold;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .footer-right .logo-adicional {
+      width: 300px;
+    }
+  
+
+.logoshark{
     text-align: center;
-    padding: 5px 0;
-    font-size: 0.9em;
+    margin: 20px;
+
 }
-
-.top-bar span {
-    margin: 0 15px;
-}
-
-
-
-        /* Rodapé */
-        .footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            background-color: #282828;
-            padding: 20px 50px;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: left;
-        }
-
-        .footer-left {
-            display: flex;
-            text-align: left;
-            flex-direction: column;
-            align-items: flex-start; /* Alinha ao início (à esquerda) */
-        }
-
-        .footer-left .contact-info {
-            line-height: 1.5;
-            text-align: left; /* Texto alinhado à esquerda */
-        }
-
-        .footer .logo {
-            width: 170px;
-            margin-bottom: 15px;
-        }
-
-        .footer .contact-title {
-            font-weight: bold;
-            margin-bottom: 15px;
-            font-size: 18px;
-        }
-
-        .footer a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        .footer-right {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end; /* Alinha o conteúdo à direita */
-        }
-
-        .footer-right .logo-adicional {
-            width: 300px;
-        }
-        .contact-info{
-          text-align: left;
-        }
   </style>
 </head>
 <body>
+
+  <!-- Cabeçalho -->
   <header class="header">
     <div class="logo-container">
       <h1 class="site-title">SHARKWAVE</h1>
@@ -200,12 +203,12 @@
       <a href="../Views/login.html"><button class="login-button">ENTRAR</button></a>
     </div>
   </header>
-  
+
+  <!-- Barra superior -->
   <div class="top-bar">
     <span>AJUDE A SALVAR O MEIO AMBIENTE</span>
     <span>CUPONS E PROMOÇÕES SEMANAIS</span>
-</div>
-
+  </div>
 
   <!-- Conteúdo principal -->
   <main>
@@ -223,9 +226,21 @@
         <h3>3. LAVAR SUAS ROUPAS</h3>
         <p>Lave roupas com a máquina cheia – evite usar a máquina de lavar quando ela estiver meio cheia. Lavar roupas com a carga cheia economiza muita água.</p>
       </div>
+      <div class="tip">
+        <h3>4. DESLIGAR APARELHOS ELETRÔNICOS</h3>
+        <p>Desligue aparelhos eletrônicos quando não estiverem em uso, para economizar energia e ajudar o meio ambiente.</p>
+      </div>
     </div>
+    <div class="logoshark">
+      <a><img src="../Views/IMAGENS/sharknadologocinza520.png" alt="sharknado"></a>
+  </div>
+  <div class="logoshark">
+      <a> <br>Desenvolvido por <strong>SHARKNADO</strong></a>
+  </div>
   </main>
 
+
+  <!-- Rodapé -->
   <footer class="footer">
     <div class="footer-left">
       <img src="../Views/IMAGENS/SAAEOK.png" alt="SAAE Salto" class="logo">
@@ -240,8 +255,6 @@
       <img src="../Views/IMAGENS/SENAassinatura.png" alt="assinatura" class="logo-adicional">
     </div>
   </footer>
-</body>
-</html>
-  
+
 </body>
 </html>

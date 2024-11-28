@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dicasem</title>
+
+  <style>
+    /* Importando a fonte Rubik */
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+    /* Estilos globais */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Arial", sans-serif;
+      background-color: #1c1c1c;
+      background-image: url('../Views/IMAGENS/background4.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+      color: #fff;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+
+    /* Cabeçalho */
+    .header {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .site-title {
+      font-size: 1.5em;
+      margin: 0;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .nav-menu a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1em;
+    }
+
+    .user-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .user-actions a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1em;
+    }
+
+    .login-button {
+      background-color: #191919;
+      border: none;
+      color: #fff;
+      padding: 5px 15px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .login-button:hover {
+      background-color: #272727;
+      border: none;
+      color: #fff;
+    }
+
+    /* Barra superior */
+    .top-bar {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 5px 0;
+      font-size: 0.9em;
+    }
+
+    .top-bar span {
+      margin: 0 15px;
+    }
+
+    /* Estilos para o conteúdo principal */
+    main {
+      text-align: center;
+      padding: 20px;
+    }
+
+    h2 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .tips {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 50px; /* Distância maior entre as dicas e o rodapé */
+    }
+
+    .tip {
+      background-color: #222;
+      padding: 20px;
+      border-radius: 5px;
+      width: 80%;
+      max-width: 600px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      text-align: left;
+    }
+
+    .tip h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .tip p {
+      font-size: 1em;
+      margin: 0;
+    }
+
+    /* Rodapé */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #282828;
+      padding: 30px 50px;
+      color: white;
+    }
+
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-left .logo {
+      width: 170px;
+      margin-bottom: 15px;
+    }
+
+    .contact-info {
+      line-height: 1.5;
+    }
+
+    .contact-title {
+      font-weight: bold;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .footer-right .logo-adicional {
+      width: 300px;
+    }
+
+    .profile-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid #fff;
+        }
+
+        .profile-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+  
+
+.logoshark{
+    text-align: center;
+    margin: 20px;
+
+}
+  </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <h1 class="site-title">SHARKWAVE</h1>
+        </div>
+        <nav class="nav-menu">
+            <a href="../Views/homecom.html">HOME</a>
+            <a href="../Views/sobrecom.html">SOBRE</a>
+            <a href="../Views/comranking.html">RANKING</a>
+            <a href="../Views/comloja.html">SHARKPOINTS</a>
+            <a href="../Views/comdenúncia.html">RECLAMAÇÕES</a>
+            <a href="../Views/dicascom.html">DICAS</a>
+        </nav>
+        <div class="user-actions">
+            <a href="../Views/homesem.html">SAIR</a>
+            <div class="profile-icon"><a href="../Views/comperfil.html"><img src="../Views/IMAGENS/italo_augustook.png" alt=""></a></div>
+        </div>
+    </header>
+    <div style="background-color: #000; color: #fff; text-align: center; padding: 5px 0; font-size: 0.9em;">
+      <span style="margin: 0 15px;">AJUDE A SALVAR O MEIO AMBIENTE</span>
+      <span style="margin: 0 15px;">CUPONS E PROMOÇÕES SEMANAIS</span>
+    </div>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <h2>DICAS E INSTRUÇÕES</h2>
+    <div class="tips">
+      <div class="tip">
+        <h3>1. REGAR PLANTAS</h3>
+        <p>Regue plantas de manhã ou à noite. Reutilize a água de limpeza para plantas.</p>
+      </div>
+      <div class="tip">
+        <h3>2. TOMAR BANHO</h3>
+        <p>Banhos mais rápidos reduzem o tempo de banho. Mesmo um minuto a menos pode resultar em grandes economias.</p>
+      </div>
+      <div class="tip">
+        <h3>3. LAVAR SUAS ROUPAS</h3>
+        <p>Lave roupas com a máquina cheia – evite usar a máquina de lavar quando ela estiver meio cheia. Lavar roupas com a carga cheia economiza muita água.</p>
+      </div>
+      <div class="tip">
+        <h3>4. DESLIGAR APARELHOS ELETRÔNICOS</h3>
+        <p>Desligue aparelhos eletrônicos quando não estiverem em uso, para economizar energia e ajudar o meio ambiente.</p>
+      </div>
+    </div>
+    <div class="logoshark">
+      <a><img src="../Views/IMAGENS/sharknadologocinza520.png" alt="sharknado"></a>
+  </div>
+  <div class="logoshark">
+      <a> <br>Desenvolvido por <strong>SHARKNADO</strong></a>
+  </div>
+  </main>
+
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="footer-left">
+      <img src="../Views/IMAGENS/SAAEOK.png" alt="SAAE Salto" class="logo">
+      <div class="contact-info">
+        <p class="contact-title">FALE CONOSCO</p>
+        <p><i class="fas fa-home"></i> R. Nove de Julho, 1033 - Centro, Salto - SP, 13320-005</p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:ouvidoria@saaesalto.sp.gov.br">ouvidoria@saaesalto.sp.gov.br</a></p>
+        <p><i class="fas fa-phone"></i> 0800 7796 300</p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <img src="../Views/IMAGENS/SENAassinatura.png" alt="assinatura" class="logo-adicional">
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -8,25 +8,27 @@
     
     <!-- Vinculando o arquivo de estilo CSS externo -->
     <link rel="stylesheet" href="../Views/CSS/denúncia.css">
-    <style>
-        /*fundo daorinha*/
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #1c1c1c;
-    color: #fff;
-    background-image: url('fundo_daorinha.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    opacity: 100%;
-}
-    </style>
+
+<style>
+     /*fundo daorinha*/
+     body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #1c1c1c;
+            color: #fff;
+            background-image: url('IMAGENS/fundo_daorinha.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            opacity: 100%;
+        }
+
+</style>
+
 </head>
 <body>
     <header style="background-color: #333; color: #fff; font-family: Arial, sans-serif; display: flex; align-items: center; justify-content: space-between; padding: 10px 20px;">
         <div style="display: flex; align-items: center;">
-          <img src="../" alt="Logo Sharknado" style="height: 50px; margin-right: 10px;"> <!-- Substitua 'logo.png' pelo caminho correto da logo -->
           <h1 style="font-size: 1.5em; margin: 0;">SHARKWAVE</h1>
         </div>
         <nav style="display: flex; gap: 20px; align-items: center;">
@@ -38,10 +40,10 @@ body {
           <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">DICAS</a>
         </nav>
         <div style="display: flex; align-items: center; gap: 10px;">
-          <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">CADASTRE-SE</a>
-          <button style="background-color: #000; color: #fff; border: none; padding: 5px 10px; font-size: 1em; cursor: pointer;">ENTRAR</button>
+          <button style="background-color: #000; color: #fff; border: none; padding: 5px 10px; font-size: 1em; cursor: pointer;">SAIR</button>
           <div style="border: 2px solid #fff; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
-            <span style="font-size: 1.5em; color: #fff;">👤</span> <!-- Substitua por um ícone real, se necessário -->
+            <span style="font-size: 1.5em; color: #fff;">👤</span> 
+            <br>
           </div>
           
         </div>
@@ -63,7 +65,7 @@ body {
             <!-- Div com a imagem e a avaliação (estrelas) -->
             <div class="report-image">
                 <!-- Imagem da denúncia -->
-                <img src="../Imagens/HTML/saaefotinho.png" alt="Denúncia foto" />
+                <img src="IMAGENS/saaefotinho.png" alt="Denúncia foto" />
                 
                 <!-- Div para exibir as estrelas e a avaliação -->
                 <div class="stars">
@@ -149,6 +151,47 @@ body {
         </div>
 
     </div>
+
+    <footer class="footer">
+
+        <div class="footer-left">
+    
+          <img src="../Views/IMAGENS/SAAEOK.png" alt="SAAE Salto" class="logo">
+    
+          <div class="contact-info">
+    
+            <p class="contact-title">
+              FALE CONOSCO
+            </p>
+    
+            <p>
+              <i class="fas fa-home"></i>
+              R. Nove de Julho, 1033 - Centro, Salto - SP, 13320-005
+            </p>
+    
+            <p>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:ouvidoria@saaesalto.sp.gov.br">
+                ouvidoria@saaesalto.sp.gov.br
+              </a>
+            </p>
+    
+            <p>
+              <i class="fas fa-phone"\></i>
+              0800 7796 300
+            </p>
+          </div>
+    
+        </div>
+    
+        <div class="footer-right">
+    
+          <img src="../Views/IMAGENS/SENAassinatura.png" alt="assinatura" class="logo-adicional">
+    
+    
+        </div>
+      </footer>
+    
 
 </body>
 </html>

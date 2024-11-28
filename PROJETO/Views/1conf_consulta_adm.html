@@ -8,7 +8,7 @@
     /* Importando fonte Rubik */
     @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
 
-    .header {
+       .header {
   background-color: #333;
   color: #fff;
   display: flex;
@@ -210,9 +210,93 @@ body {
     .send-btn:hover {
       background-color: #1c7c31;
     }
+
+    /*bloco de aviso */
+
+/* Cor de fundo do botão ao passar o mouse */
+button:hover {
+    background-color: #555;
+}
+.alert-box {
+    position: fixed;
+    top: 40%; /* Um pouco acima do centro */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+}
+
+.alert-box h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+
+.alert-box p {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #000000;
+}
+
+.alert-box button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: rgb(7, 7, 7);
+    color: rgb(234, 234, 234);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.alert-box button:hover {
+    background-color: rgb(114, 114, 114);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(52, 51, 51, 0.5); /* Cinza com opacidade */
+    z-index: 999; /* Certifique-se de que a camada fique por cima de todo o conteúdo */
+
+}
+
+.fosco_esquerda{
+    position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 999; /* Certifique-se de que a camada fique por cima de todo o conteúdo */
+        opacity: 35%;
+        transform: translate(53%, -15%);
+}
+
+.fosco_direita{
+    position: fixed;
+        top: 0;
+        left: 800;
+        width: 100%;
+        height: 100%;
+        z-index: 999; /* Certifique-se de que a camada fique por cima de todo o conteúdo */
+        opacity: 35%;
+        transform: translate(0%, -8%);
+      }
+
+
   </style>
 </head>
 <body>
+
+
 
   <header class="header">
     <div class="logo-container">
@@ -221,7 +305,7 @@ body {
     <nav class="nav-menu">
       <a href="">HOME</a>
       <a href="../Views/consultaadm.html">CONSULTA</a>
-      <a href="">DICAS</a>
+      <a href="#">DICAS</a>
       
     </nav>
     <div class="user-actions">
@@ -234,6 +318,22 @@ body {
     <span style="margin: 0 15px;">CUPONS E PROMOÇÕES SEMANAIS</span>
     <span style="margin: 0 15px;">ITU E REGIÃO</span>
   </div>
+
+  
+  <div class="alert-box">
+    <h2>USUÁRIO EXCLUÍDO !!</h2> 
+    <p>EM BREVE, ESTE USUÁRIO SERÁ EXCLUÍDO.</p>
+    <button onclick="voltar()">VOLTAR</button>
+</div>
+
+
+<div class="fosco_esquerda">
+  <img src="IMAGENS/fundo_preto.png" alt="fundo fosco">
+</div>
+
+<div class="fosco_direita">
+  <img src="IMAGENS/fundo_preto.png" alt="fundo fosco">
+</div>
 
 
   <div class="container">
