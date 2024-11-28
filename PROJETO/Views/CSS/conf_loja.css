@@ -208,12 +208,11 @@ button:hover {
 .footer {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     background-color: #282828;
     padding-left: 130px;
     color: white;
     font-family: Arial, sans-serif;
-   
+    transform: translate(-33%, 120%);
   }
   
   .footer-left {
