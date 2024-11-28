@@ -21,10 +21,11 @@ body {
 }
 h1 {
     text-align: center;
+    letter-spacing: 2px;
 }
 .caixa2 {
     width: 45%;         
-    height: 100px;          
+    height: 140px;          
     background-color:#c6c3c3; 
     padding: 20px;                     
     position: absolute;

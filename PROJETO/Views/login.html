@@ -4,29 +4,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sharkwave Login</title>
     <style>
-        body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #1c1c1c;
-    color: #fff;
-    background-image: url('../Views/IMAGENS/background2.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
+        /* Importando a fonte Rubik */
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Estilos globais */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  background-color: #1c1c1c;
+  background-image: url('../Views/IMAGENS/background4.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  color: #fff;
 }
 
-
-
-.nav-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+a {
+  color: white;
+  text-decoration: none;
 }
 
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
+a:hover {
+  text-decoration: underline;
+}
+
+/* Cabeçalho */
+.header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-title {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-actions a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.login-button {
+  background-color: #191919;
+  border: none;
+  color: #fff;
+  padding: 5px 15px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.login-button:hover {
+  background-color: #272727;
+  border: none;
+  color: #fff;
+}
+
+/* Barra superior */
+.top-bar {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 0.9em;
+}
+
+.top-bar span {
+  margin: 0 15px;
+}
+
+/* Rodapé */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282828;
+  padding: 30px 50px;
+  color: white;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-left .logo {
+  width: 170px;
+  margin-bottom: 15px;
+}
+
+.contact-info {
+  line-height: 1.5;
+}
+
+.contact-title {
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-right .logo-adicional {
+  width: 300px;
 }
 
 .login-container {
@@ -66,8 +170,6 @@
     cursor: pointer;
 }
 
-
-
 .admin-login {
     background: #c4c4c4;
     color: #1c1c1c;
@@ -95,148 +197,33 @@
     top: 67%;
     right: 43%;
 }
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
-
-.rubik-<uniquifier> {
-  font-family: "Rubik", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal
-}
-
-.header { background-color: #333; 
-    color: #fff; display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    padding: 10px 20px; } 
-.site-title { 
-    font-size: 1.5em; 
-    margin: 0; }
- .nav-menu { 
-    display: flex; 
-    gap: 20px; 
-    align-items: center; } 
-.nav-menu a { 
-    color: #fff; 
-    text-decoration: none;
-    font-size: 1em; } 
-.user-actions { 
-    display: flex; 
-    align-items: center; 
-    gap: 10px; } 
-.user-actions a { 
-    color: #fff; 
-    text-decoration: none; 
-    font-size: 1em; } 
-.login-button { 
-    background-color: #000; 
-    color: #fff; 
-    border: none; 
-    padding: 5px 10px; 
-    font-size: 1em; 
-    cursor: pointer; } 
-.profile-icon { 
-    border: 2px solid #fff; 
-    border-radius: 50%; 
-    width: 40px; 
-    height: 40px; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    font-size: 1.5em; 
-    color: #fff; 
-}
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #282828;
-  padding-left: 130px;
-  color: white;
-  font-family: Arial, sans-serif;
- 
-}
-
-.footer-left {
-  display: flex;
-  flex-direction: column;
-}
-
-
-.logo {
-  width: 170px;
-  /* Define a largura do logotipo da esquerda */
-  margin-bottom: 15px;
-  /* Espaçamento abaixo do logotipo */
-}
-
-.contact-info {
-  line-height: 1.0;
-  /* Espaçamento entre linhas do texto de contato */
-}
-
-.contact-title {
-  font-weight: bold;
-  /* Deixa o título em negrito */
-  margin-bottom: 25px;
-  /* Espaçamento abaixo do título */
-  font-size: 18px;
-  /* Tamanho da fonte do título */
-}
-
-a {
-  color: rgb(27, 27, 27);
-  /* Cor dos links de e-mail */
-  text-decoration: none;
-  /* Remove o sublinhado padrão dos links */
-}
-
-a:hover {
-  text-decoration: underline;
-  /* Adiciona sublinhado ao passar o mouse */
-}
-
-.footer-right .logo-adicional {
-  width: 300px;
-  /* Define a largura do logotipo adicional à direita */
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.contact-info p i {
-  margin-right: 5px;
-}
 
 
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="logo-container">
-          <h1 class="site-title">SHARKWAVE</h1>
-        </div>
-        <nav class="nav-menu">
-          <a href="#">HOME</a>
-          <a href="#">SOBRE</a>
-          <a href="#">RANKING</a>
-          <a href="#">SHARKPOINTS</a>
-          <a href="#">RECLAMAÇÕES</a>
-          <a href="#">DICAS</a>
-        </nav>
-        <div class="user-actions">
-          <a href="#">CADASTRE-SE</a>
-          <button class="login-button">ENTRAR</button>
-        </div>
-      </header>
-      <div style="background-color: #000; color: #fff; text-align: center; padding: 5px 0; font-size: 0.9em;">
-        <span style="margin: 0 15px;">AJUDE A SALVAR O MEIO AMBIENTE</span>
-        <span style="margin: 0 15px;">CUPONS E PROMOÇÕES SEMANAIS</span>
-        <span style="margin: 0 15px;">ITU E REGIÃO</span>
-      </div>
+  <header class="header">
+    <div class="logo-container">
+      <h1 class="site-title">SHARKWAVE</h1>
+    </div>
+    <nav class="nav-menu">
+      <a href="../Views/homesem.html">HOME</a>
+      <a href="../Views/sobresem.html">SOBRE</a>
+      <a href="../Views/semcadastro.html">RANKING</a>
+      <a href="../Views/semcadastro.html">SHARKPOINTS</a>
+      <a href="../Views/semcadastro.html">RECLAMAÇÕES</a>
+      <a href="../Views/dicassem.html">DICAS</a>
+    </nav>
+    <div class="user-actions">
+      <a href="../Views/Erick_login2.html">CADASTRE-SE</a>
+      <a href="../Views/login.html"><button class="login-button">ENTRAR</button></a>
+    </div>
+  </header>
+  <div style="background-color: #000; color: #fff; text-align: center; padding: 5px 0; font-size: 0.9em;">
+    <span style="margin: 0 15px;">AJUDE A SALVAR O MEIO AMBIENTE</span>
+    <span style="margin: 0 15px;">CUPONS E PROMOÇÕES SEMANAIS</span>
+    <span style="margin: 0 15px;">ITU E REGIÃO</span>
+  </div>
     
     <main class="login-container">
         
@@ -248,14 +235,13 @@ body {
                 
                 <label for="senha">SENHA</label>
                 <input type="password" id="senha" placeholder="1234">
-                
-                <button type="submit" class="admin-login">ENVIAR</button>
-                <a href="#" >Esqueci minha senha</a>
+                <a href="../Views/esqueci.html" >Esqueci minha senha</a>
                
             </form>
-            <button class="admin-login">ENTRAR COMO ADM</button>
-            <button class="admin-login">FAZER CADASTRO</button>
-            <button class="back-button">VOLTAR</button>
+            <a href="../Views/homecom.html"><button class="admin-login">ENTRAR</button></a>
+            <a href="../Views/homeadm.html"><button class="admin-login">ENTRAR COMO ADM</button></a>
+            <a href="../Views/Cadastro.html"><button class="admin-login">FAZER CADASTRO</button></a>
+            <a href="../Views/homesem.html"><button class="back-button">VOLTAR</button></a>
         </div>
         
     </main>
