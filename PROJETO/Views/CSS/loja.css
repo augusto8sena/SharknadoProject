@@ -1,134 +1,76 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .container {
-    width: 40%;
-    padding: 50px;
-    background-color: #1e1e1e;
-    border-radius: 8px;
+  width: 40%;
+  padding: 50px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
 }
 
 .saldo {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .saldo p {
-    font-size: 14px;
-    color: #ccc;
+  font-size: 14px;
+  color: #ccc;
 }
 
 .saldo h2 {
-    font-size: 36px;
-    color: #fff;
+  font-size: 36px;
+  color: #fff;
 }
 
 .card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #2b2b2b;
-    margin-bottom: 15px;
-    padding: 15px;
-    border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2b2b2b;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
 }
 
 .logo img {
-    width: 80px;
+  width: 80px;
 }
 
 .info {
-    text-align: right;
+  text-align: right;
 }
 
 .info p {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #444;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #555;
+  background-color: #555;
 }
 
-.footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #282828; /* Cor de fundo escura do rodapé */
-    padding-left: 130px; /* Espaçamento interno do rodapé */
-    color: white; /* Cor do texto */
-    font-family: Arial, sans-serif; /* Fonte usada no rodapé */
-  }
-  
-  .footer-left {
-    display: flex;
-    flex-direction: column; /* Organiza os elementos verticalmente na esquerda */
-  }
-  
-  .logo {
-    width: 170px; /* Define a largura do logotipo da esquerda */
-    margin-bottom: 15px; /* Espaçamento abaixo do logotipo */
-  }
-  
-  .contact-info {
-    line-height: 1.0; /* Espaçamento entre linhas do texto de contato */
-  }
-  
-  .contact-title {
-    font-weight: bold; /* Deixa o título em negrito */
-    margin-bottom: 10px; /* Espaçamento abaixo do título */
-    font-size: 18px; /* Tamanho da fonte do título */
-  }
-  
-  a {
-    color: white; /* Cor dos links de e-mail */
-    text-decoration: none; /* Remove o sublinhado padrão dos links */
-  }
-  
-  a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
-  }
-  
-  .footer-right .logo-adicional {
-    width: 300px; /* Define a largura do logotipo adicional à direita */
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-}
 
-.icon-container {
-    position: fixed; /* Fixado na tela */
-    top: 300px; /* Distância do topo */
-    left: 120px; /* Distância da esquerda */
-}
 
-.icon-container i {
-    display: block; /* Cada ícone em uma linha */
-    margin-bottom: 10px; /* Espaço entre os ícones */
-    font-size: 24px; /* Tamanho dos ícones */
-    color: #ffffff; /* Cor dos ícones (pode ajustar conforme necessidade) */
-}
