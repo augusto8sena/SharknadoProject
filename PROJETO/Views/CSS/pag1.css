@@ -1,131 +1,31 @@
-.texto-branco{
-    color:white;
-}
-
-.container {
-    display: grid;
-    grid-template-rows: 60px 1fr 40px;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-        "header"
-        "main"
-        "footer"; 
-    height: 100vh; 
+.texto-branco {
+  color: white;
 }
 
 body {
-    background-color: #252424;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 100vh;
-    font-family: "Rubik", sans-serif;
+  background-color: #252424;
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh; /* Certificando que o body ocupa toda a altura da tela */
 }
 
-.main {
-    width: 35%;         
-    height: 200px;          
-    background-color:#333; 
-    padding: 20px;                     
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    z-index: 0;
-    border-radius: 20px; 
-}
-.button {
-    background-color: #040404; 
-    color: rgb(251, 247, 247); 
-    padding: 10px 20px; 
-    border: 5px; 
-    cursor: pointer; 
-    font-size: 16px;
-    border-radius: 10px; 
-    text-decoration: none;
-    
+/* Ajuste para garantir que a container ocupe toda a tela */
+.container {
+  display: grid;
+  grid-template-rows: 60px 1fr 40px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "main" "footer";
+  height: 100%; /* Garantir que a altura da container ocupe 100% da tela */
+  width: 100%; /* Garantir que a largura da container ocupe 100% da tela */
 }
 
-.button2 {
-    background-color: #040404; 
-    color: rgb(251, 247, 247); 
-    padding: 10px 20px; 
-    border: 5px; 
-    cursor: pointer; 
-    font-size: 16px;
-    margin-left: 160px;
-    border-radius: 10px; 
-    text-decoration: none;
-}
-.voltar {
-    color: rgb(251, 247, 247); 
-    cursor: pointer; 
-    font-size: 16px;
-    margin-left: 470px;
-    text-decoration: none;
-}
-.logo1 {
-    position: absolute;
-    top: 420px; 
-    z-index: 1;
-}
-
-
-/*rodapé*/
-
-.footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #282828;
-    padding-left: 130px;
-    color: white;
-    font-family: Arial, sans-serif;
-   
-  }
-  
-  .footer-left {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .logo {
-    width: 170px;
-    margin-bottom: 15px;
-  }
-  
-  .contact-info {
-    line-height: 1.0;
-    
-  }
-  
-  .contact-title {
-    font-weight: bold;
-    margin-bottom: 25px;
-    font-size: 18px;
-  
-  }
-  
-  a {
-    color: white;
-    text-decoration: none;
-    
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  .footer-right .logo-adicional {
-    width: 300px;
-  
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-  }
-  
+/* Cabeçalho */
 .header {
+  grid-area: header;
   background-color: #333;
   color: #fff;
   display: flex;
@@ -137,18 +37,11 @@ body {
 .site-title {
   font-size: 1.5em;
   margin: 0;
-  color: #fff;
-}
-
-.site-title {
-  font-size: 1.5em;
-  margin: 0;
 }
 
 .nav-menu {
   display: flex;
   gap: 20px;
-  align-items: center;
 }
 
 .nav-menu a {
@@ -166,16 +59,6 @@ body {
 .user-actions a {
   color: #fff;
   text-decoration: none;
-  font-size: 1em;
-}
-
-.login-button {
-  background-color: #000;
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  font-size: 1em;
-  cursor: pointer;
 }
 
 .profile-icon {
@@ -188,4 +71,114 @@ body {
   justify-content: center;
   font-size: 1.5em;
   color: #fff;
+}
+
+/* Barra de alerta */
+.alert-bar {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 0.9em;
+}
+
+.alert-bar span {
+  margin: 0 15px;
+}
+
+/* Corpo */
+.main {
+  width: 45%;
+  height: 260%;
+  background-color: #333;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  margin: auto; 
+  text-align: center; 
+  margin-top: -150px;
+}
+
+
+.button {
+  background-color: #040404;
+  color: rgb(251, 247, 247);
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.button2 {
+  background-color: #040404;
+  color: rgb(251, 247, 247);
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-left: 250px;
+}
+
+.voltar {
+  color: rgb(251, 247, 247);
+  font-size: 16px;
+  text-decoration: none;
+  margin-left: 600px;
+}
+
+.logo1 {
+  position: relative;
+  top: 230px;
+  left: 530px;
+  z-index: 1;
+}
+
+/* Rodapé */
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282828;
+  padding: 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin-top: 580px;
+  height: 350px;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  width: 170px;
+  margin-bottom: 15px;
+}
+
+.contact-info {
+  line-height: 1.5;
+}
+
+.contact-title {
+  font-weight: bold;
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.footer-right .logo-adicional {
+  width: 300px;
 }
