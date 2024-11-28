@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <!-- Ligação com o CSS externo -->
+    <link rel="stylesheet" href="../CSS/ranking.css">
+    <style>
+       
+       /*fundo daorinha*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #1c1c1c;
+    color: #fff;
+    background-image: url('fundo_daorinha.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    opacity: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <header style="background-color: #333; color: #fff; font-family: Arial, sans-serif; display: flex; align-items: center; justify-content: space-between; padding: 10px 20px;">
+        <div style="display: flex; align-items: center;">
+          <img src="../IMAGENS/sharknadologocinza.png" alt="Logo Sharknado" style="height: 50px; margin-right: 10px;"> <!-- Substitua 'logo.png' pelo caminho correto da logo -->
+          <h1 style="font-size: 1.5em; margin: 0;">SHARKWAVE</h1>
+        </div>
+        <nav style="display: flex; gap: 20px; align-items: center;">
+          <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">HOME</a>
+          <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">SOBRE</a>
+          <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">RANKING</a>
+          <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">SHARKPOINTS</a>
+          <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">RECLAMAÇÕES</a>
+          <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">DICAS</a>
+        </nav>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">CADASTRE-SE</a>
+          <button style="background-color: #000; color: #fff; border: none; padding: 5px 10px; font-size: 1em; cursor: pointer;">ENTRAR</button>
+          <div style="border: 2px solid #fff; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+            
+          </div>
+          
+        </div>
+        
+        
+      </header>
+      <div style="background-color: #000; color: #fff; text-align: center; padding: 5px 0; font-size: 0.9em;">
+        <span style="margin: 0 15px;">AJUDE A SALVAR O MEIO AMBIENTE</span>
+        <span style="margin: 0 15px;">CUPONS E PROMOÇÕES SEMANAIS</span>
+        <span style="margin: 0 15px;">ITU E REGIÃO</span>
+      </div>
+    <div class="container">
+      
+       <!-- Moeda -->
+       <img src="../Imagens/HTML/gifsharkpointSP.gif" alt="Moeda bonita" class="moeda">
+      
+        <!-- Título principal -->
+        <h1 class="leaderboard-title">LEADERBOARD</h1> <br>
+       
+       <!-- Subtítulo -->
+        <p class="subtitle">SHARKPOINTS COLETADOS - ITU E REGIÃO</p> <br> <br>
+
+        <!-- Seção do pódio com os 3 primeiros -->
+        <div class="podium">
+            <!-- Segundo colocado -->
+            <div class="podium-item second">
+                <div class="avatar-container">
+                    <img src="italo_zacariasok.png" alt="Miguel" class="avatar"> <!-- Imagem do avatar -->
+                </div>
+                <h2>2</h2> <!-- Posição -->
+                <span class="points">295SP</span> <!-- Pontuação -->
+                <p>Miguel</p> <!-- Nome -->
+            </div>
+            
+            <!-- Primeiro colocado (o mais alto no pódio) -->
+            <div class="podium-item first">
+                <div class="avatar-container">
+                    <img src="../Imagens/HTML/" alt="Ítalo" class="avatar"> <!-- Imagem do avatar -->
+                </div>
+                <h2>1</h2> <!-- Posição -->
+                <span class="points">325SP</span> <!-- Pontuação -->
+                <p>Ítalo</p> <!-- Nome -->
+            </div>
+            
+            <!-- Terceiro colocado -->
+            <div class="podium-item third">
+                <div class="avatar-container">
+                    <img src="italo_diego_certinhookok.png" alt="Diego" class="avatar"> <!-- Imagem do avatar -->
+                </div>
+                <h2>3</h2> <!-- Posição -->
+                <span class="points">287SP</span> <!-- Pontuação -->
+                <p>Diego</p> <!-- Nome -->
+            </div>
+        </div>
+
+        <!-- Lista dos outros colocados -->
+        <div class="ranking">
+            <div class="ranking-item">
+                <img src="italo_itlalook.png" alt="Ítalo" class="avatar"> <!-- Imagem do avatar -->
+                <span>Ítalo</span>
+                <span>287SP</span>
+            </div>
+            <div class="ranking-item">
+                <img src="italo_zacook.png" alt="Miguel" class="avatar"> <!-- Imagem do avatar -->
+                <span>Miguel</span>
+                <span>295SP</span>
+            </div>
+            <div class="ranking-item">
+                <img src="italo_diegook.png" alt="Diego" class="avatar"> <!-- Imagem do avatar -->
+                <span>Diego</span>
+                <span>287SP</span>
+            </div>
+            <div class="ranking-item">
+                <img src="italo_augustook.png" alt="Augusto" class="avatar"> <!-- Imagem do avatar -->
+                <span>Augusto</span>
+                <span>267SP</span>
+            </div>
+            <div class="ranking-item">
+                <img src="Italo_livia.png" alt="Lívia" class="avatar"> <!-- Imagem do avatar -->
+                <span>Lívia</span>
+                <span>260SP</span>
+            </div>
+            <div class="ranking-item">
+                <img src="italo_isaok.png" alt="Isadora" class="avatar"> <!-- Imagem do avatar -->
+                <span>Isadora</span>
+                <span>254SP</span>
+            </div>
+        </div>
+
+        <!-- Texto de destaque -->
+        <p class="highlight">PARABÉNS! VOCÊ ESTÁ NA 4ª COLOCAÇÃO</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Sharkwave</title>
+    <style>
+        /* Estilo geral */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Rubik', sans-serif;
+            background-color: #1c1c1c;
+            color: #fff;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Cabeçalho */
+        .header {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .site-title {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        /* Container principal */
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            padding: 20px;
+            background: url('../Views/IMAGENS/background3.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Formulário */
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            color: #000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            width: 800px; /* Aumenta o tamanho da caixa */
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em; /* Aumenta o tamanho do título */
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .form-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        /* Coluna da direita (Ícone e botões) */
+        .form-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .form-right img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            background-color: #f7f7f7;
+        }
+
+        .form-right .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Coluna da esquerda (Campos de formulário) */
+        .form-left {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            text-align: left;
+        }
+
+        .form-left label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .form-left input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Botões */
+        .botao {
+            display: inline-block;
+            background-color: #6c757d; /* Cinza */
+            color: #fff; /* Cor do texto */
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            border: 2px solid #6c757d;
+            transition: all 0.3s ease;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .botao:hover {
+            background-color: #5a6268; /* Cinza mais escuro */
+            border-color: #5a6268;
+        }
+
+        .botao:active {
+            background-color: #4e555b;
+        }
+
+        /* Botão Voltar (Agora reduzido e cinza) */
+        .botao-voltar {
+            display: inline-block;
+            background-color: #6c757d; /* Cinza */
+            color: #fff;
+            padding: 8px 15px; /* Reduz o tamanho do botão */
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-radius: 5px;
+            border: 2px solid #6c757d;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 20px; /* Distância do botão de envio */
+        }
+
+        .botao-voltar:hover {
+            background-color: #5a6268;
+            border-color: #5a6268;
+        }
+
+        .botao-voltar:active {
+            background-color: #4e555b;
+        }
+
+        .footer {
+            background-color: #282828;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="logo-container">
+            <h1 class="site-title">SHARKWAVE</h1>
+        </div>
+        <nav class="nav-menu">
+            <a href="#">HOME</a>
+            <a href="#">SOBRE</a>
+            <a href="#">RANKING</a>
+            <a href="#">SHARKPOINTS</a>
+            <a href="#">RECLAMAÇÕES</a>
+            <a href="#">DICAS</a>
+        </nav>
+    </header>
+
+    <!-- Container Principal -->
+    <main class="main-container">
+        <!-- Formulário -->
+        <div class="form-container">
+            <h1>CADASTRO</h1>
+            <div class="form-content">
+                <!-- Coluna da direita (Ícone e botões) -->
+                <div class="form-right">
+                    <img src="../Views/IMAGENS/user2.png" alt="Imagem de usuário">
+                    <div class="button-group">
+                        <a href="#" class="botao">+ Adicionar membros</a>
+                        <a href="#" class="botao">Termos e condições</a>
+                    </div>
+                </div>
+
+                <!-- Coluna da esquerda (Campos de formulário) -->
+                <div class="form-left">
+                    <form>
+                        <label for="cpf">CPF</label>
+                        <input type="text" id="cpf" placeholder="999.999.999-99">
+
+                        <label for="data">Data de nascimento</label>
+                        <input type="text" id="data" placeholder="00/00/0000">
+
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" placeholder="Seu nome completo">
+
+                        <label for="telefone">Telefone</label>
+                        <input type="text" id="telefone" placeholder="(XX) XXXXX-XXXX">
+
+                        <label for="email">Email</label>
+                        <input type="text" id="email" placeholder="seuemail@email.com">
+
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" placeholder="Digite uma senha segura">
+
+                        <div class="button-group">
+                            <a href="cadastro_concluido.html" class="botao">ENVIAR</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Botão Voltar (Agora reduzido e cinza) -->
+            <a href="fazer_cadastro.html" class="botao-voltar">VOLTAR</a>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>Desenvolvido por <strong>Sharknado</strong></p>
+    </footer>
+</body>
+</html>

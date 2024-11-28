@@ -4,135 +4,340 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leaderboard</title>
-    <!-- Ligação com o CSS externo -->
-    <link rel="stylesheet" href="CSS/ranking.css">
     <style>
-       
-       /*fundo daorinha*/
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #1c1c1c;
-    color: #fff;
-    background-image: url('fundo_daorinha.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    opacity: 100%;
-}
+        /* Centralização e fundo */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            background-image: url('../Views/IMAGENS/background3.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            text-align: center; /* Garantir que o texto principal seja centralizado */
+        }
 
+        .container {
+            width: 90%; /* Usar 90% da tela */
+            max-width: 1200px; /* Máximo de 1200px de largura */
+            margin: 0 auto; /* Centralizar o container */
+            text-align: center; /* Centralizar o conteúdo */
+            padding: 20px;
+        }
+
+        .leaderboard-title {
+            font-size: 3.5em; /* Tamanho grande */
+            margin-bottom: 10px; /* Espaço inferior */
+            letter-spacing: 2px; /* Espaçamento entre letras */
+        }
+
+        .subtitle {
+            font-size: 1.5em; /* Tamanho intermediário */
+            margin-bottom: 30px; /* Espaçamento maior */
+            font-weight: 300; /* Mais leve */
+            color: #CCC; /* Cor cinza claro */
+        }
+
+        .podium {
+            display: flex; /* Usar flexbox */
+            justify-content: center; /* Centralizar os itens do pódio */
+            align-items: flex-end; /* Alinhamento inferior */
+            margin-bottom: 40px; /* Espaço inferior */
+        }
+
+        .podium-item {
+            position: relative; /* Para ajuste de posicionamento */
+            text-align: center; /* Centralizar texto */
+            margin: 0 15px; /* Margem entre itens */
+        }
+
+        .first {
+            order: 0; /* Ficar no centro */
+            font-size: 1.8em; /* Tamanho maior */
+        }
+
+        .second {
+            order: -1; /* Ficar à esquerda */
+            font-size: 1.4em; /* Tamanho médio */
+        }
+
+        .third {
+            order: 1; /* Ficar à direita */
+            font-size: 1.2em; /* Tamanho menor */
+        }
+
+        .avatar-container {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 15px;
+        }
+
+        .avatar {
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .podium-item h2 {
+            margin: 10px 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .podium-item .points {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        .podium-item p {
+            font-size: 1.2em;
+            margin-top: 5px;
+        }
+
+        .ranking {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+            padding: 20px;
+        }
+
+        .ranking-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+            font-size: 1.2em;
+        }
+
+        .highlight {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-top: 30px;
+            color: #FFCC00;
+            text-align: center;
+        }
+
+        .moe {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .logoshark a {
+            display: block;
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .site-title {
+            font-size: 1.5em;
+            margin: 0;
+            color: #fff;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .user-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            background-color: #282828;
+            padding: 20px 50px;
+            color: white;
+        }
+
+        .footer-left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footer-left .contact-info {
+            line-height: 1.5;
+        }
+
+        .footer .logo {
+            width: 170px;
+            margin-bottom: 15px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .footer-right .logo-adicional {
+            width: 300px;
+        }
+
+        .profile-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid #fff;
+        }
+
+        .profile-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .login-button {
+            background-color: #191919;
+            border: none;
+            color: #fff;
+            padding: 5px 15px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .login-button:hover {
+            background-color: #272727;
+        }
+
+        img.avatar {
+            border: 3px solid white;
+            border-radius: 50%;
+        }
     </style>
 </head>
 <body>
-    <header style="background-color: #333; color: #fff; font-family: Arial, sans-serif; display: flex; align-items: center; justify-content: space-between; padding: 10px 20px;">
-        <div style="display: flex; align-items: center;">
-          <img src="../IMAGENS/sharknadologocinza.png" alt="Logo Sharknado" style="height: 50px; margin-right: 10px;"> <!-- Substitua 'logo.png' pelo caminho correto da logo -->
-          <h1 style="font-size: 1.5em; margin: 0;">SHARKWAVE</h1>
+    <header class="header">
+        <div class="logo-container">
+            <h1 class="site-title">SHARKWAVE</h1>
         </div>
-        <nav style="display: flex; gap: 20px; align-items: center;">
-          <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">HOME</a>
-          <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">SOBRE</a>
-          <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">RANKING</a>
-          <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">SHARKPOINTS</a>
-          <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">RECLAMAÇÕES</a>
-          <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">DICAS</a>
+        <nav class="nav-menu">
+            <a href="../Views/homecom.html">HOME</a>
+            <a href="../Views/sobrecom.html">SOBRE</a>
+            <a href="../Views/comranking.html">RANKING</a>
+            <a href="../Views/comloja.html">SHARKPOINTS</a>
+            <a href="../Views/comdenúncia.html">RECLAMAÇÕES</a>
+            <a href="../Views/dicascom.html">DICAS</a>
         </nav>
-        <div style="display: flex; align-items: center; gap: 10px;">
-          <a href="#" style="color: #fff; text-decoration: none; font-size: 1em;">CADASTRE-SE</a>
-          <button style="background-color: #000; color: #fff; border: none; padding: 5px 10px; font-size: 1em; cursor: pointer;">ENTRAR</button>
-          <div style="border: 2px solid #fff; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
-            
-          </div>
-          
+        <div class="user-actions">
+            <a href="../Views/homesem.html">SAIR</a>
+            <div class="profile-icon"><a href="../Views/comperfil.html"><img src="../Views/IMAGENS/italo_augustook.png" alt=""></a></div>
         </div>
-        
-        
-      </header>
-      <div style="background-color: #000; color: #fff; text-align: center; padding: 5px 0; font-size: 0.9em;">
+    </header>
+    <div style="background-color: #000; color: #fff; text-align: center; padding: 5px 0; font-size: 0.9em;">
         <span style="margin: 0 15px;">AJUDE A SALVAR O MEIO AMBIENTE</span>
         <span style="margin: 0 15px;">CUPONS E PROMOÇÕES SEMANAIS</span>
-        <span style="margin: 0 15px;">ITU E REGIÃO</span>
-      </div>
-    <div class="container">
-      
-       <!-- Moeda -->
-       <img src="../Imagens/HTML/gifsharkpointSP.gif" alt="Moeda bonita" class="moeda">
-      
-        <!-- Título principal -->
-        <h1 class="leaderboard-title">LEADERBOARD</h1> <br>
-       
-       <!-- Subtítulo -->
-        <p class="subtitle">SHARKPOINTS COLETADOS - ITU E REGIÃO</p> <br> <br>
-
-        <!-- Seção do pódio com os 3 primeiros -->
-        <div class="podium">
-            <!-- Segundo colocado -->
-            <div class="podium-item second">
-                <div class="avatar-container">
-                    <img src="italo_zacariasok.png" alt="Miguel" class="avatar"> <!-- Imagem do avatar -->
-                </div>
-                <h2>2</h2> <!-- Posição -->
-                <span class="points">295SP</span> <!-- Pontuação -->
-                <p>Miguel</p> <!-- Nome -->
-            </div>
-            
-            <!-- Primeiro colocado (o mais alto no pódio) -->
-            <div class="podium-item first">
-                <div class="avatar-container">
-                    <img src="italo_itlalonum1.png" alt="Ítalo" class="avatar"> <!-- Imagem do avatar -->
-                </div>
-                <h2>1</h2> <!-- Posição -->
-                <span class="points">325SP</span> <!-- Pontuação -->
-                <p>Ítalo</p> <!-- Nome -->
-            </div>
-            
-            <!-- Terceiro colocado -->
-            <div class="podium-item third">
-                <div class="avatar-container">
-                    <img src="italo_diego_certinhookok.png" alt="Diego" class="avatar"> <!-- Imagem do avatar -->
-                </div>
-                <h2>3</h2> <!-- Posição -->
-                <span class="points">287SP</span> <!-- Pontuação -->
-                <p>Diego</p> <!-- Nome -->
-            </div>
-        </div>
-
-        <!-- Lista dos outros colocados -->
-        <div class="ranking">
-            <div class="ranking-item">
-                <img src="italo_itlalook.png" alt="Ítalo" class="avatar"> <!-- Imagem do avatar -->
-                <span>Ítalo</span>
-                <span>287SP</span>
-            </div>
-            <div class="ranking-item">
-                <img src="italo_zacook.png" alt="Miguel" class="avatar"> <!-- Imagem do avatar -->
-                <span>Miguel</span>
-                <span>295SP</span>
-            </div>
-            <div class="ranking-item">
-                <img src="italo_diegook.png" alt="Diego" class="avatar"> <!-- Imagem do avatar -->
-                <span>Diego</span>
-                <span>287SP</span>
-            </div>
-            <div class="ranking-item">
-                <img src="italo_augustook.png" alt="Augusto" class="avatar"> <!-- Imagem do avatar -->
-                <span>Augusto</span>
-                <span>267SP</span>
-            </div>
-            <div class="ranking-item">
-                <img src="Italo_livia.png" alt="Lívia" class="avatar"> <!-- Imagem do avatar -->
-                <span>Lívia</span>
-                <span>260SP</span>
-            </div>
-            <div class="ranking-item">
-                <img src="italo_isaok.png" alt="Isadora" class="avatar"> <!-- Imagem do avatar -->
-                <span>Isadora</span>
-                <span>254SP</span>
-            </div>
-        </div>
-
-        <!-- Texto de destaque -->
-        <p class="highlight">PARABÉNS! VOCÊ ESTÁ NA 4ª COLOCAÇÃO</p>
     </div>
+    
+    <img src="../Views/IMAGENS/gifsharkpointSP.gif" alt="Moeda bonita" class="moe">
+    
+    <h1 class="leaderboard-title">LEADERBOARD</h1> <br>
+    
+    <p class="subtitle">SHARKPOINTS COLETADOS - ITU E REGIÃO</p> <br> <br>
+    
+    <div class="podium">
+        <!-- Segundo colocado -->
+        <div class="podium-item second">
+            <div class="avatar-container">
+                <img src="../Views/IMAGENS/italo_zacariasok.png" alt="Miguel" class="avatar">
+            </div>
+            <h2>2</h2>
+            <span class="points">295SP</span>
+            <p>Miguel</p>
+        </div>
+        
+        <!-- Primeiro colocado -->
+        <div class="podium-item first">
+            <div class="avatar-container">
+                <img src="../Views/IMAGENS/italo_itlalonum1.png" alt="Ítalo" class="avatar">
+            </div>
+            <h2>1</h2>
+            <span class="points">325SP</span>
+            <p>Ítalo</p>
+        </div>
+        
+        <!-- Terceiro colocado -->
+        <div class="podium-item third">
+            <div class="avatar-container">
+                <img src="../Views/IMAGENS/italo_mauriciook.png" alt="Maurício" class="avatar">
+            </div>
+            <h2>3</h2>
+            <span class="points">190SP</span>
+            <p>Maurício</p>
+        </div>
+    </div>
+    
+    <div class="ranking">
+        <div class="ranking-item">
+            <span>4º</span>
+            <span>180SP</span>
+        </div>
+        <div class="ranking-item">
+            <span>5º</span>
+            <span>160SP</span>
+        </div>
+        <div class="ranking-item">
+            <span>6º</span>
+            <span>140SP</span>
+        </div>
+        <div class="ranking-item">
+            <span>7º</span>
+            <span>120SP</span>
+        </div>
+        <div class="ranking-item">
+            <span>8º</span>
+            <span>100SP</span>
+        </div>
+    </div>
+
+    <div class="highlight">
+        <h2>PRIMEIROS COLOCADOS - ITU E REGIÃO</h2>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-left">
+            <div class="contact-info">
+                <p>Endereço: Rua X, nº 123 - Centro</p>
+                <p>Telefone: (11) 1234-5678</p>
+                <p>Email: contato@sharkwave.com</p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <img class="logo-adicional" src="../Views/IMAGENS/footerlogo.png" alt="Logo adicional">
+        </div>
+    </footer>
 </body>
 </html>
