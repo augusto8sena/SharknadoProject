@@ -1,11 +1,367 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Denúncias Recentes</title>
+    <style>
+       
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .recent-reports {
+            display: flex;
+            background-color: #222;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .report-image {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #333;
+            border-radius: 10px;
+            padding: 15px;
+            margin-right: 20px;
+        }
+        .report-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .stars {
+            text-align: center;
+            color: #fff;
+        }
+        .comments-section {
+            flex: 2;
+        }
+        .comments-section h2 {
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        .comment {
+            background-color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .comment h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .form-section {
+            grid-column: span 2;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    background-color: #686868; /* Cor cinza claro */
+    color: white; /* Cor da fonte para branco */
+   
+}
+        .rating {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            flex-direction: row-reverse;
+        }
+        .rating input {
+            display: none;
+        }
+        .rating label {
+            font-size: 30px;
+            color: #ccc;
+            cursor: pointer;
+        }
+        .rating input:checked ~ label {
+            color: #fff;
+        }
+        .rating label:hover,
+        .rating label:hover ~ label {
+            color: #fff;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #444;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            background-image: url('../Views/IMAGENS/background3.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .site-title {
+            font-size: 1.5em;
+            margin: 0;
+            color: #fff;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .user-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .user-actions a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .login-button {
+            background-color: #191919;
+            border: none;
+            color: #fff;
+            padding: 5px 15px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .login-button:hover {
+            background-color: #272727;
+            border: none;
+            color: #fff;
+            padding: 5px 15px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            background-color: #282828;
+            padding: 20px 50px;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: left;
+        }
+
+        .footer-left {
+            display: flex;
+            text-align: left;
+            flex-direction: column;
+            align-items: flex-start; /* Alinha ao início (à esquerda) */
+        }
+
+        .footer-left .contact-info {
+            line-height: 1.5;
+            text-align: left; /* Texto alinhado à esquerda */
+        }
+
+        .footer .logo {
+            width: 170px;
+            margin-bottom: 15px;
+        }
+
+        .footer .contact-title {
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Alinha o conteúdo à direita */
+        }
+
+        .footer-right .logo-adicional {
+            width: 300px;
+        }
+        .contact-info{
+          text-align: left;
+        }
+
+        .profile-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid #fff;
+        }
+
+        .profile-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        
+      
+
+.logoshark{
+    text-align: center;
+    margin: 20px;
+
+}
+    </style>
 </head>
 <body>
-    
-</body>
+<header class="header">
+    <h1 class="site-title">SHARKWAVE</h1>
+    <nav class="nav-menu">
+        <a href="../Views/homecom.html">HOME</a>
+        <a href="../Views/sobrecom.html">SOBRE</a>
+        <a href="../Views/comranking.html">RANKING</a>
+        <a href="../Views/comloja.html">SHARKPOINTS</a>
+        <a href="../Views/comdenúncia.html">RECLAMAÇÕES</a>
+        <a href="../Views/dicascom.html">DICAS</a>
+    </nav>
+    <div class="user-actions">
+        <a href="../Views/homesem.html">SAIR</a>
+        <div class="profile-icon">
+            <a href="../Views/comperfil.html">
+                <img src="../Views/IMAGENS/italo_augustook.png" alt="Perfil">
+            </a>
+        </div>
+    </div>
+</header>
+<div style="background-color: #000; color: #fff; text-align: center; padding: 5px 0; font-size: 0.9em;">
+    <span>AJUDE A SALVAR O MEIO AMBIENTE</span>
+    <span>CUPONS E PROMOÇÕES SEMANAIS</span>
+</div>
+<main>
+  <div class="logoshark">
+    <a> <br>Desenvolvido por <strong>SHARKNADO</strong></a>
+</div>
+
+    <div class="container">
+        <div class="recent-reports">
+            <div class="report-image">
+                <img src="IMAGENS/saaefotinho.png" alt="Denúncia foto">
+                <div class="stars">
+                    <span>★★★★☆</span>
+                    <p>Avalie também</p>
+                    <p>SAAE Salto</p>
+                    <p>4.1/5.0</p>
+                </div>
+            </div>
+            <div class="comments-section">
+                <h2>DENÚNCIAS RECENTES</h2>
+                <div class="comment">
+                    <h3>Anônimo</h3>
+                    <p>"Moradores da Rua das Palmeiras, Bairro Jardim Vista... Problemas constantes de água."</p>
+                </div>
+                <div class="comment">
+                    <h3>Camilla</h3>
+                    <p>"Na rua do Campo, bairro Vila Esperança, na esquina, a calçada está quebrada e há risco de acidentes..."</p>
+                </div>
+                <div class="comment">
+                    <h3>Agnaldo</h3>
+                    <p>"Na última semana recebi água amarelada nas torneiras. Além disso, houve problemas de abastecimento..."</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-section">
+            <h2>FAÇA SUA DENÚNCIA</h2>
+            <form action="#">
+                <div class="form-group">
+                    <input type="checkbox" id="anonimo" name="anonimo">
+                    <label for="anonimo">Anônimo</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="primeiroNome" name="primeiroNome">
+                    <label for="primeiroNome">Primeiro Nome</label>
+                </div>
+                <textarea placeholder="Escrever mensagem..."></textarea>
+                <div class="rating">
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1" title="1 estrela">★</label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2" title="2 estrelas">★</label>
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3" title="3 estrelas">★</label>
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4" title="4 estrelas">★</label>
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5" title="5 estrelas">★</label>
+                </div>
+                <button type="submit">ENVIAR</button>
+            </form>
+        </div>
+    </div>
+    <div class="logoshark">
+      <a> <br>Desenvolvido por <strong>SHARKNADO</strong></a>
+  </div>
+
+</main>
+<footer class="footer">
+  <div class="footer-left">
+      <img src="../Views/IMAGENS/SAAEOK.png" alt="SAAE Salto" class="logo">
+      <div class="contact-info">
+          <p class="contact-title">FALE CONOSCO</p>
+          <p>R. Nove de Julho, 1033 - Centro, Salto - SP, 13320-005</p>
+          <p><a href="mailto:ouvidoria@saaesalto.sp.gov.br">ouvidoria@saaesalto.sp.gov.br</a></p>
+          <p>0800 7796 300</p>
+      </div>
+  </div>
+  <div class="footer-right">
+      <img src="../Views/IMAGENS/SENAassinatura.png" alt="assinatura" class="logo-adicional">
+  </div>
+</footer> 
+</body> 
 </html>

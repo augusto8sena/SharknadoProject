@@ -214,11 +214,58 @@
     .top-bar span {
             margin: 0 15px;
         }
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .popup {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            color: #000;
+        }
+        .popup h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        .popup p {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        .popup a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .popup a:hover {
+            background-color: #555;
+        }
 
     </style>
 </head>
 <body>
-    <!-- Cabeçalho -->
+    <div class="popup-overlay">
+        <div class="popup">
+            <h2>Email enviado!</h2>
+            <p>Um email foi enviado com sua nova senha.</p>
+            <a href="../Views/login.html">LOGAR EM SUA CONTA</a>
+        </div>
+    </div>
+  
     <header class="header">
         <div class="logo-container">
             <h1 class="site-title">SHARKWAVE</h1>
