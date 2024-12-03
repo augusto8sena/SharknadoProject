@@ -73,26 +73,120 @@
     object-fit: cover; /* Para ajustar a imagem dentro */
 }
 
-/* Estilo para as posições (números) */
-.podium-item h2 {
-    margin: 10px 0;
-    font-size: 2.5em; /* Tamanho grande */
-    font-weight: bold; /* Negrito */
+/* Seção do pódio */
+.podium {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Alinha a base das colunas */
+    gap: 50px; /* Espaçamento horizontal entre os itens */
+    margin-bottom: 40px;
 }
 
-/* Pontuação */
+/* Itens do pódio */
+.podium-item {
+    position: relative;
+    text-align: center;
+}
+
+/* Tamanhos diferentes para os vencedores */
+.podium-item.first {
+    order: 0;
+    font-size: 1.8em;
+    height: 250px; /* Ajusta a altura para o primeiro lugar */
+}
+
+.podium-item.second {
+    order: -1;
+    font-size: 1.4em;
+    height: 200px; /* Altura menor para o segundo lugar */
+}
+
+.podium-item.third {
+    order: 1;
+    font-size: 1.2em;
+    height: 180px; /* Altura menor para o terceiro lugar */
+}
+
+/* Imagem do avatar */
+.avatar-container {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px auto; /* Centraliza a imagem e adiciona espaçamento inferior */
+}
+
+.avatar {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100%; /* Garante que a imagem ocupe o container */
+    height: 100%;
+}
+
+/* Seção do pódio */
+.podium {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Alinha a base das colunas */
+    gap: 50px; /* Espaçamento horizontal entre os itens */
+    margin-bottom: 40px;
+}
+
+/* Itens do pódio */
+.podium-item {
+    position: relative;
+    text-align: center;
+}
+
+/* Tamanhos diferentes para os vencedores */
+.podium-item.first {
+    order: 0;
+    font-size: 1.8em;
+    height: 250px; /* Ajusta a altura para o primeiro lugar */
+}
+
+.podium-item.second {
+    order: -1;
+    font-size: 1.4em;
+    height: 200px; /* Altura menor para o segundo lugar */
+}
+
+.podium-item.third {
+    order: 1;
+    font-size: 1.2em;
+    height: 180px; /* Altura menor para o terceiro lugar */
+}
+
+/* Imagem do avatar */
+.avatar-container {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px auto; /* Centraliza a imagem e adiciona espaçamento inferior */
+}
+
+.avatar {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100%; /* Garante que a imagem ocupe o container */
+    height: 100%;
+}
+
+/* Texto abaixo da imagem */
+.podium-item h2 {
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
 .podium-item .points {
-    font-size: 1.8em; /* Destaque nas pontuações */
+    font-size: 1.8em;
     font-weight: bold;
 }
 
-/* Nome do jogador */
 .podium-item p {
     font-size: 1.2em;
     margin-top: 5px;
 }
 
-/* Lista de ranking */
+
+
 .ranking {
     max-width: 600px; /* Limitando a largura */
     margin: 0 auto;
