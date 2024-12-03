@@ -8,8 +8,28 @@
   <style>
     /* Importando a fonte Rubik */
     @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+    .botao button {
+    background-color: #303030; /* Cor de fundo inicial */
+    border: none;
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; /* Tamanho do texto */
+    border-radius: 5px; /* Borda arredondada */
+    transition: all 0.3s ease; /* Animação suave */
+    cursor: pointer; 
+    margin-top: 15px;
+  }
 
-    /* Estilos globais */
+  .botao button:hover {
+    background-color: #3e3e3e; /* Cor ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais forte no hover */
+    transform: scale(1.05); /* Leve aumento */
+  }
+
+  
     body {
       margin: 0;
       padding: 0;
@@ -194,7 +214,44 @@
     text-align: center;
     margin: 20px;
 
+
 }
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .add-tip-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+
+  .add-tip-form input,
+  .add-tip-form textarea,
+  .add-tip-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+
   </style>
 </head>
 <body>
@@ -225,22 +282,31 @@
     <h2>DICAS E INSTRUÇÕES</h2>
     <div class="tips">
       <div class="tip">
-        <h3>1. REGAR PLANTAS</h3>
+        <h3>REGAR PLANTAS</h3>
         <p>Regue plantas de manhã ou à noite. Reutilize a água de limpeza para plantas.</p>
       </div>
       <div class="tip">
-        <h3>2. TOMAR BANHO</h3>
+        <h3>TOMAR BANHO</h3>
         <p>Banhos mais rápidos reduzem o tempo de banho. Mesmo um minuto a menos pode resultar em grandes economias.</p>
       </div>
       <div class="tip">
-        <h3>3. LAVAR SUAS ROUPAS</h3>
+        <h3>LAVAR SUAS ROUPAS</h3>
         <p>Lave roupas com a máquina cheia – evite usar a máquina de lavar quando ela estiver meio cheia. Lavar roupas com a carga cheia economiza muita água.</p>
       </div>
       <div class="tip">
-        <h3>4. DESLIGAR APARELHOS ELETRÔNICOS</h3>
+        <h3>DESLIGAR APARELHOS ELETRÔNICOS</h3>
         <p>Desligue aparelhos eletrônicos quando não estiverem em uso, para economizar energia e ajudar o meio ambiente.</p>
       </div>
     </div>
+    <form class="add-tip-form">
+      <h3>ADICIONAR NOVA DICA</h3>
+      <input type="text" name="titulo" placeholder="Título" required>
+      <textarea name="descricao" placeholder="Descrição da dica" rows="4" required></textarea>
+      
+    </form>
+    <a href="../Views/conf_dicascom.html" class="botao"><button type="submit">ENVIAR DICA</button></a>
+</main>
+
     <div class="logoshark">
       <a><img src="../Views/IMAGENS/sharknadologocinza520.png" alt="sharknado"></a>
   </div>

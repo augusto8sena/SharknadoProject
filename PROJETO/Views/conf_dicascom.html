@@ -193,31 +193,9 @@
 .logoshark{
     text-align: center;
     margin: 20px;
+
+
 }
-
-.botao button {
-    background-color: #303030; /* Cor de fundo inicial */
-    border: none;
-    color: white; /* Cor do texto */
-    padding: 10px 20px; /* Espaçamento interno */
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px; /* Tamanho do texto */
-    border-radius: 5px; /* Borda arredondada */
-    transition: all 0.3s ease; /* Animação suave */
-    cursor: pointer; 
-    margin-top: 15px;
-  }
-
-  .botao button:hover {
-    background-color: #3e3e3e; /* Cor ao passar o mouse */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais forte no hover */
-    transform: scale(1.05); /* Leve aumento */
-  }
-
-
-
 main {
     display: flex;
     flex-direction: column;
@@ -262,29 +240,79 @@ main {
   .add-tip-form button:hover {
     background-color: #454545;
   }
+  .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup {
+            background: #1f1f1f;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .popup h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .popup a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .popup a:hover {
+            background-color: #555;
+        }
   </style>
 </head>
 <body>
+    <div class="popup-overlay">
+        <div class="popup">
+            <h2>DICA ENVIADA COM SUCESSO</h2>
+            <p>Sua denúncia foi enviada para nossa centro, após a analise será adicionado a página.</p>
+            <a href="../Views/dicascom.html">VOLTAR</a>
+        </div>
+    </div>
     <header class="header">
         <div class="logo-container">
             <h1 class="site-title">SHARKWAVE</h1>
         </div>
         <nav class="nav-menu">
-            <a href="../Views/homeadm.html">HOME</a>
-            <a href="../Views/consultaadm.html">CONSULTA</a>
-            <a href="../Views/dicasadm.html">DICAS</a>
+            <a href="../Views/homecom.html">HOME</a>
+            <a href="../Views/sobrecom.html">SOBRE</a>
+            <a href="../Views/comranking.html">RANKING</a>
+            <a href="../Views/comloja.html">SHARKPOINTS</a>
+            <a href="../Views/comdenúncia.html">RECLAMAÇÕES</a>
+            <a href="../Views/dicascom.html">DICAS</a>
         </nav>
         <div class="user-actions">
-          <a href="../Views/homesem.html">SAIR</a>
-          <A>👤</A>
-      </div>
+            <a href="../Views/homesem.html">SAIR</a>
+            <div class="profile-icon"><a href="../Views/comperfil.html"><img src="../Views/IMAGENS/italo_augustook.png" alt=""></a></div>
+        </div>
     </header>
     <div style="background-color: #000; color: #fff; text-align: center; padding: 5px 0; font-size: 0.9em;">
       <span style="margin: 0 15px;">AJUDE A SALVAR O MEIO AMBIENTE</span>
       <span style="margin: 0 15px;">CUPONS E PROMOÇÕES SEMANAIS</span>
     </div>
 
-
+  <!-- Conteúdo principal -->
   <main>
     <h2>DICAS E INSTRUÇÕES</h2>
     <div class="tips">
@@ -307,11 +335,10 @@ main {
     </div>
     <form class="add-tip-form">
       <h3>ADICIONAR NOVA DICA</h3>
-      <input type="text" name="titulo" placeholder="Título " required>
+      <input type="text" name="titulo" placeholder="Título da dica" required>
       <textarea name="descricao" placeholder="Descrição da dica" rows="4" required></textarea>
-      
+      <button type="submit">ENVIAR DICA</button>
     </form>
-    <a href="../Views/conf_dicas_adm.html" class="botao"><button type="submit">ENVIAR DICA</button></a>
 </main>
 
     <div class="logoshark">

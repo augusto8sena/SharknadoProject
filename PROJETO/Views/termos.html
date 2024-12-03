@@ -239,9 +239,87 @@
         .top-bar span {
             margin: 0 15px;
         }
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            color: #000;
+        }
+
+        .popup h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .popup a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #a7a7a7;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .popup a:hover {
+            background-color: #6d6d6d;
+        }
     </style>
 </head>
 <body>
+    <div class="popup-overlay">
+        <div class="popup">
+            <h2>TERMOS E CONDIÇÕES</h2>
+            <p> Bem-vindo ao SharkWave! Antes de utilizar nosso site, pedimos que leia atentamente os Termos e Condições a seguir. Ao acessar ou usar qualquer parte do site, você concorda em cumprir e estar vinculado a estes termos. Se você não concorda com todos os termos, não deverá usar o site ou os serviços oferecidos.
+                <br>
+                            1. Definições
+                            Usuário: Qualquer pessoa que navegue ou utilize os serviços oferecidos pelo site SharkWave. 
+                            SharkWave: Plataforma online desenvolvida pela equipe Sharknado para promover a conscientização e a economia de água. 
+                            Serviços: Recursos e informações fornecidos no site, como dicas de economia de água, calculadoras de consumo e outros conteúdos educacionais.
+                            <br><br>
+                            2. Uso do Site
+                            O site SharkWave é disponibilizado para uso pessoal e não comercial. Os usuários concordam em utilizar o site de forma responsável, sem violar leis aplicáveis ou os direitos de terceiros. O usuário é responsável por garantir que as informações fornecidas no site sejam usadas de forma correta e ética.
+                            <br><br>
+                            3. Propriedade Intelectual
+                            Todos os conteúdos, textos, gráficos, imagens, logotipos e outros materiais presentes no SharkWave são de propriedade da equipe Sharknado ou de seus parceiros e estão protegidos por leis de direitos autorais e propriedade intelectual. O uso não autorizado de qualquer conteúdo do site é proibido, salvo com a permissão explícita da equipe Sharknado.
+                            <br><br>
+                            4. Limitação de Responsabilidade
+                            O SharkWave é uma plataforma informativa e não garante a precisão ou a eficácia absoluta das dicas e sugestões fornecidas. O uso dos serviços do site é por conta e risco do usuário. A equipe Sharknado não se responsabiliza por danos diretos, indiretos, incidentais ou consequenciais que possam surgir do uso ou da incapacidade de uso do site.
+                            <br><br>
+                            5. Modificações nos Termos
+                            O SharkWave reserva-se o direito de atualizar ou modificar estes Termos e Condições a qualquer momento, sem aviso prévio. É responsabilidade do usuário revisar periodicamente os termos atualizados.
+                            <br><br>
+                            6. Links para Sites de Terceiros
+                            O site pode conter links para outros sites que não são controlados ou operados pelo SharkWave. Não nos responsabilizamos pelo conteúdo ou políticas de privacidade desses sites externos.
+                            <br><br>
+                            7. Política de Privacidade
+                            O uso de dados pessoais coletados por meio do SharkWave é regido pela nossa Política de Privacidade, que pode ser acessada na seção correspondente do site.
+                            <br><br>
+                            8. Contato
+                            Em caso de dúvidas sobre estes Termos e Condições, entre em contato com a equipe Sharknado através do nosso formulário de contato no site.
+                            <br><br>
+                            Data da última atualização: 05/11/2024
+                            <br><br>
+                            Ao continuar a usar o SharkWave, você confirma que leu, entendeu e concorda com os Termos e Condições aqui descritos.
+                            </p>
+                            <a href="../Views/cadastroteste.html">VOLTAR</a>
+        </div>
+    </div>
     <header class="header">
         <div class="logo-container">
             <h1 class="site-title">SHARKWAVE</h1>
@@ -271,7 +349,7 @@
                     <img src="../Views/IMAGENS/user2.png" alt="Imagem de usuário">
                     <div class="button-group">
                         <a href="#" class="botao">+ Adicionar membros</a>
-                        <a href="../Views/termos.html" class="botao">Termos e condições</a>
+                        <a href="#" class="botao">Termos e condições</a>
                     </div>
                 </div>
                 <div class="form-left">
@@ -295,7 +373,7 @@
                         <input type="password" id="senha" placeholder="Digite uma senha segura">
 
                         <div class="button-group">
-                            <a href="conf_cadastro.html" class="botao">ENVIAR</a>
+                            <a href="cadastro_concluido.html" class="botao">ENVIAR</a>
                         </div>
                     </form>
                 </div>
@@ -307,6 +385,7 @@
             </div>
         </div>
     </main>
+
     <footer class="footer">
         <div class="footer-left">
             <img src="../Views/IMAGENS/SAAEOK.png" alt="SAAE Salto" class="logo">
